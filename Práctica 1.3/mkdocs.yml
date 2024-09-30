@@ -1,0 +1,7 @@
+site_author: Edu
+site_name: Edu-mkdocs
+site-description: Mi primera práctica en Mkdocs-GitHub Pages
+nav:
+    - Inicio: index.md
+    - Paso1: Paso1.md
+    - Paso2: Paso2.md
