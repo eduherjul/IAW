@@ -4,4 +4,4 @@
 
 ** Puedes ver el script [aquí](Scripts/Instalacion-LAMP.sh)
 
-[Descargar](Scripts/Instalacion-LAMP.sh){ .md-button }
+[Descargar](docs/Instalacion-LAMP.md){ .md-button }
