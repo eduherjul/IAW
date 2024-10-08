@@ -3,9 +3,7 @@ site_name: Edu-mkdocs
 site-description: Creación y configuración de un certificado SSL/TLS autofirmado en Apache
 nav:
   - Inicio: index.md
-  - Instalación de LAMP: Instalación-LAMP.sh
-  - Instalación certificado SSL/TLS: setup-certificado-firmado.sh
-  - Config. ssl.conf y .conf: ssl-conf_.conf.sh
+  - Documento explicativo: Documento técnico.md
 theme:
   name: material
   language: es

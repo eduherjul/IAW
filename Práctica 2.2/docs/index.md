@@ -1,7 +1,5 @@
-# Práctica 3 para la creación de una página estática en mkdocs
+# Práctica 3 para la instalación de LAMP, certificado SSL/TLS y configurar ficheros .ssl.conf-.conf
 
 ## Descripción
 
-* Instalación de LAMP: Instalación-LAMP.sh
-* Instalación certificado SSL/TLS: setup-certificado-firmado.sh
-* Config. ssl.conf y .conf: ssl-conf_.conf.sh
+* DOCUMENTO EXPLICATIVO
