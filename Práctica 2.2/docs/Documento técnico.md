@@ -11,7 +11,7 @@ Este script realiza todas las acciones necesarias, como la actualización del si
 
 </div>
 
-** Puedes ver el script [aquí](Scripts/Instalacion-LAMP.sh)
+** Puedes ver el script [aquí](Instalacion-LAMP.md)
 
 <a href="Scripts/Instalacion-LAMP.sh" download>**DESCARGAR**</a>
 
@@ -30,7 +30,7 @@ Automatizar el proceso de creación ahorra tiempo y esfuerzo. Al ejecutar un scr
 
 </div>
 
-** Puedes ver el script [aquí](Scripts/setup-certificado-firmado.sh)
+** Puedes ver el script [aquí](setup-certificado-firmado.md)
 
 <a href="Scripts/setup-certificado-firmado.sh" download>**DESCARGAR**</a>
 
@@ -57,7 +57,7 @@ En nuestro caso, el virtual host que maneja las peticiones HTTP está en el arch
 
 El script nos habilitará el módulo rewrite en apache y reinicirá el servicio.
 
-** Puedes ver el script [aquí](Scripts/ssl-conf_.conf.sh)
+** Puedes ver el script [aquí](ssl-conf_.conf.md)
 
 <a href="Scripts/ssl-conf_.conf.sh" download>**DESCARGAR**</a>
 
