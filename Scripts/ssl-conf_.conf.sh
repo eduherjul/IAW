@@ -93,7 +93,7 @@ if [ "$sino" -eq 0 ]; then
 fi
 
 #Comprobar que el puerto 443 está abierto en las reglas del firewall para permitir el tráfico HTTPS.
-dialog --title "En las regals de Firewall" \
+dialog --title "En las reglas de Firewall (sudo ufw status)" \
   --msgbox "Comprobar que el puerto 443 está abierto para tráfico HTTPS" 5 60
 
 clear
