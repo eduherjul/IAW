@@ -1,0 +1,41 @@
+site_author: Edu
+site_name: Edu-mkdocs
+site-description: Creación y configuración de un certificado SSL/TLS autofirmado en Apache
+nav:
+  - Inicio: index.md
+  - Instalación de LAMP: Instalación-LAMP.sh
+  - Instalación certificado SSL/TLS: setup-certificado-firmado.sh
+  - Config. ssl.conf y .conf: ssl-conf_.conf.sh
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.top
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - header.autohide
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      sheme: default
+      primary: green
+      accent: purle
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+mardown_extensions:
+  - pymdownx.highlight:
+      anchor_linemus: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+
+copyright: edu 2024
