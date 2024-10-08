@@ -11,8 +11,6 @@
       
       
       
-        <link rel="prev" href="..">
-      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Documento explicativo - Edu-mkdocs</title>
+        <title>Instalacion LAMP - Edu-mkdocs</title>
       
     
     
@@ -74,11 +72,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#paso-1" class="md-skip">
-          Saltar a contenido
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Documento explicativo
+              Instalacion LAMP
             
           </span>
         </div>
@@ -212,11 +205,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../Documento%20t%C3%A9cnico/" class="md-tabs__link">
         
   
     
@@ -290,29 +281,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Documento explicativo
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Documento%20t%C3%A9cnico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,33 +292,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-del-conjunto-de-sofware-lamp" class="md-nav__link">
-    Instalación del conjunto de sofware LAMP
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -369,23 +313,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-del-conjunto-de-sofware-lamp" class="md-nav__link">
-    Instalación del conjunto de sofware LAMP
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -400,10 +327,45 @@
                   
 
 
-<h1 id="paso-1">PASO 1</h1>
-<h2 id="instalacion-del-conjunto-de-sofware-lamp">Instalación del conjunto de sofware LAMP</h2>
-<p>** Puedes ver el script <a href="../Scripts/Instalacion-LAMP.sh">aquí</a></p>
-<p><a href="../Scripts/Instalacion-LAMP.sh">Descargar</a>{ .md-button }</p>
+  <h1>Instalacion LAMP</h1>
+
+<pre><code class="language-bash">
+#!/bin/bash
+
+#############################################
+echo &quot;Script para automatizar la instalación de LAMP para Debian/Ubuntu o derivados&quot;
+echo &quot;Apache&quot;
+echo &quot;MySQL&quot;
+echo &quot;PHP&quot;
+
+#############################################
+#Actualización de sistema####################
+
+echo &quot;Actualizando el sistema..&quot;
+sudo apt update -y &amp;&amp; sudo apt dist-upgrade -y &amp;&amp; sudo apt autoremove -y
+#Instalación de Apache#######################
+
+echo &quot;Instalando apache..&quot;
+sudo apt install apache2 -y
+#Instalación de PHP##########################
+
+echo &quot;Instalando PHP..&quot;
+sudo apt install php libapache2-mod-php php-mysql -y
+
+#Instalación MySQL###########################
+
+echo &quot;Instalando MySQL-server..&quot;
+sudo apt install mysql-server -y
+
+#Reinicio del servicio apache##############
+
+echo &quot;Reiniciando apache..&quot;
+sudo systemctl restart apache2
+
+echo &quot;--------------AUTOR  EDU-----------------&quot;
+exit 0
+
+</code></pre>
 
 
 
