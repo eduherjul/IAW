@@ -18,7 +18,7 @@
     
     
       
-        <title>Instalacion LAMP - Edu-mkdocs</title>
+        <title>Setup certificado firmado - Edu-mkdocs</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instalacion LAMP
+              Setup certificado firmado
             
           </span>
         </div>
@@ -327,45 +327,24 @@
                   
 
 
-  <h1>Instalacion LAMP</h1>
+  <h1>Setup certificado firmado</h1>
 
 <pre><code class="language-bash">
-
 #!/bin/bash
+set -x
 
-#############################################
-echo &quot;Script para automatizar la instalación de LAMP para Debian/Ubuntu o derivados&quot;
-echo &quot;Apache&quot;
-echo &quot;MySQL&quot;
-echo &quot;PHP&quot;
+# Configuramos las variables con los datos que necesita el certificado
+OPENSSL_COUNTRY=&quot;ES&quot;
+OPENSSL_PROVINCE=&quot;Valencia&quot;
+OPENSSL_LOCALITY=&quot;Tavernes de la Valldigna&quot;
+OPENSSL_ORGANIZATION=&quot;Eduardo Hernández Juliá&quot;
+OPENSSL_ORGUNIT=&quot;Departamento de Informatica&quot;
+OPENSSL_COMMON_NAME=&quot;practica-https.local&quot;
+OPENSSL_EMAIL=&quot;udexeraco@hotmail.com&quot;
 
-#############################################
-#Actualización de sistema####################
+# Creamos el certificado autofirmado
 
-echo &quot;Actualizando el sistema..&quot;
-sudo apt update -y &amp;&amp; sudo apt dist-upgrade -y &amp;&amp; sudo apt autoremove -y
-#Instalación de Apache#######################
-
-echo &quot;Instalando apache..&quot;
-sudo apt install apache2 -y
-#Instalación de PHP##########################
-
-echo &quot;Instalando PHP..&quot;
-sudo apt install php libapache2-mod-php php-mysql -y
-
-#Instalación MySQL###########################
-
-echo &quot;Instalando MySQL-server..&quot;
-sudo apt install mysql-server -y
-
-#Reinicio del servicio apache##############
-
-echo &quot;Reiniciando apache..&quot;
-sudo systemctl restart apache2
-
-echo &quot;--------------AUTOR  EDU-----------------&quot;
-
-exit 0
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt -subj &quot;/C=$OPENSSL_COUNTRY/ST=$OPENSSL_PROVINCE/L=$OPENSSL_LOCALITY/O=$OPENSSL_ORGANIZATION/OU=$OPENSSL_ORGUNIT/CN=$OPENSSL_COMMON_NAME/emailAddress=$OPENSSL_EMAIL&quot;
 
 </code></pre>
 

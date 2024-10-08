@@ -99,4 +99,4 @@ Comprobamos después de volver a reiniciar Apache que podemos acceder a ella des
 ## **ESQUEMA DE LA ESTRUCTURA DEL REPOSITORIO**
 
 ![tree1](img/tree-L1.png)
-![tree2](img/tree-L2.png)
+![tree2](img/tree-L3.png)

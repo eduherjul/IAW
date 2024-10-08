@@ -18,7 +18,7 @@
     
     
       
-        <title>Instalacion LAMP - Edu-mkdocs</title>
+        <title>Ssl conf .conf - Edu-mkdocs</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instalacion LAMP
+              Ssl conf .conf
             
           </span>
         </div>
@@ -327,44 +327,108 @@
                   
 
 
-  <h1>Instalacion LAMP</h1>
+  <h1>Ssl conf .conf</h1>
 
 <pre><code class="language-bash">
-
 #!/bin/bash
 
-#############################################
-echo &quot;Script para automatizar la instalación de LAMP para Debian/Ubuntu o derivados&quot;
-echo &quot;Apache&quot;
-echo &quot;MySQL&quot;
-echo &quot;PHP&quot;
+#Script para configurar un nuevo archivo en /etc/apache2/sites-available/xxx-ssl.conf
+#Script para configurar un nuevo archivo en /etc/apache2/sites-available/xxx.conf
 
-#############################################
-#Actualización de sistema####################
+#Instalación de dialog
+sudo apt install dialog -y
 
-echo &quot;Actualizando el sistema..&quot;
-sudo apt update -y &amp;&amp; sudo apt dist-upgrade -y &amp;&amp; sudo apt autoremove -y
-#Instalación de Apache#######################
+#Función para capturar el código de retorno del diálogo
+function acabar() {
+  exit_status=$?
+  # Verificar si se seleccionó &quot;Cancelar&quot;
+  if [ $exit_status -ne 0 ]; then
+    clear
+    echo &quot;Operación cancelada&quot;
+    exit 1
+  fi
+}
 
-echo &quot;Instalando apache..&quot;
-sudo apt install apache2 -y
-#Instalación de PHP##########################
+#Configurar ssl.conf
+dialog --title &quot;SSL/TSL&quot; \
+  --yesno &quot;¿Quieres crear un archivo de configuración HTTPS?&quot; 0 0
+sino=$?
 
-echo &quot;Instalando PHP..&quot;
-sudo apt install php libapache2-mod-php php-mysql -y
+if [ &quot;$sino&quot; -eq 0 ]; then
 
-#Instalación MySQL###########################
+  #Introducimos el nombre del fichero ssl.conf
+  nomssl=$(dialog --title &quot;Configuramos un nuevo /etc/apache2/sites-available/xxx-ssl.conf&quot; \
+    --stdout \
+    --inputbox &quot;Nombre del archivo&quot; 0 0)
+  #Llamo a la funcion:
+  acabar
 
-echo &quot;Instalando MySQL-server..&quot;
-sudo apt install mysql-server -y
+  #configuramos un nuevo ssl.conf
+  echo &quot;&lt;IfModule mod_ssl.c&gt;
+        &lt;VirtualHost *:443&gt;
+                #ServerName practica-https.local
+                DocumentRoot /var/www/html
+                DirectoryIndex index.php index.html
+                ErrorLog ${APACHE_LOG_DIR}/error.log
+                CustomLog ${APACHE_LOG_DIR}/access.log combined
+                SSLEngine on
+                SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
+                SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
+        &lt;/VirtualHost&gt;
+&lt;/IfModule&gt;&quot; | sudo tee /etc/apache2/sites-available/&quot;$nomssl&quot;-ssl.conf
 
-#Reinicio del servicio apache##############
+  #Habilitamos el virtual host que acabamos de configurar.
+  sudo a2ensite &quot;$nomssl&quot;-ssl.conf
 
-echo &quot;Reiniciando apache..&quot;
-sudo systemctl restart apache2
+  #Habilitamos el módulo SSL en Apache.
+  sudo a2enmod ssl
 
-echo &quot;--------------AUTOR  EDU-----------------&quot;
+fi
 
+#Configurar .conf
+dialog --title &quot;HTTP&quot; \
+  --yesno &quot;¿Quieres crear un archivo de configuración HTTP?&quot; 0 0
+sino=$?
+
+if [ &quot;$sino&quot; -eq 0 ]; then
+
+  #Introducimos el nombre del fichero ssl.conf
+  nomhttp=$(dialog --title &quot;Configuramos un nuevo /etc/apache2/sites-available/xxx.conf&quot; \
+    --stdout \
+    --inputbox &quot;Nombre del archivo&quot; 0 0)
+  #Llamo a la funcion:
+  acabar
+
+  #configuramos un nuevo .conf
+  echo &quot;&lt;VirtualHost *:80&gt;
+    #ServerName practica-https.local
+    DocumentRoot /var/www/html
+    #Redirige alpuerto 443 (HTTPS)
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    RewriteEngineOn
+    RewriteCond%{HTTPS} off
+    RewriteRule^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+&lt;/VirtualHost&gt;&quot; | sudo tee /etc/apache2/sites-available/&quot;$nomhttp&quot;.conf
+
+  #Para que servidor web Apache pueda hacer redirección de HTTP a HTTPS habilitamos módulo rewrite (Apache).
+  sudo a2enmod rewrite
+
+  #Reiniciamos el servicio de Apache
+  sudo systemctl restart apache2.service
+
+  #Comprobamos:
+  clear
+  sudo systemctl status apache2.service
+  read -p &quot;ENTER para continuar&quot;
+
+fi
+
+#Comprobar que el puerto 443 está abierto en las reglas del firewall para permitir el tráfico HTTPS.
+dialog --title &quot;En las reglas de Firewall (sudo ufw status)&quot; \
+  --msgbox &quot;Comprobar que el puerto 443 está abierto para tráfico HTTPS&quot; 5 60
+
+clear
 exit 0
 
 </code></pre>
