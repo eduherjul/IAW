@@ -1,5 +1,6 @@
-# Práctica 2.2 para la instalación de LAMP, certificado SSL/TLS y configurar ficheros .ssl.conf-.conf
+# Apache Práctica 2.2 Certificado SSL/TLS
+
 
 ## Descripción
 
-* DOCUMENTO EXPLICATIVO
+* DOCUMENTO-TECNICO
