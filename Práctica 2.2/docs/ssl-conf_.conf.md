@@ -30,7 +30,7 @@ if [ "$sino" -eq 0 ]; then
   nomssl=$(dialog --title "Configuramos un nuevo /etc/apache2/sites-available/xxx-ssl.conf" \
     --stdout \
     --inputbox "Nombre del archivo" 0 0)
-  #Llamo a la funcion:
+  #Llamo a la función:
   acabar
 
   #configuramos un nuevo ssl.conf
@@ -66,14 +66,14 @@ if [ "$sino" -eq 0 ]; then
   nomhttp=$(dialog --title "Configuramos un nuevo /etc/apache2/sites-available/xxx.conf" \
     --stdout \
     --inputbox "Nombre del archivo" 0 0)
-  #Llamo a la funcion:
+  #Llamo a la función:
   acabar
 
   #configuramos un nuevo .conf
   echo "<VirtualHost *:80>
     #ServerName practica-https.local
     DocumentRoot /var/www/html
-    #Redirige alpuerto 443 (HTTPS)
+    #Redirige al puerto 443 (HTTPS)
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
     RewriteEngineOn

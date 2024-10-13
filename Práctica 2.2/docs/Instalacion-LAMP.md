@@ -31,7 +31,12 @@ sudo apt install mysql-server -y
 #Reinicio del servicio apache##############
 
 echo "Reiniciando apache.."
-sudo systemctl restart apache2
+sudo systemctl restart apache2.service
+sudo systemctl --no-pager status apache2.service
+sudo ufw enable
+sudo ufw allow in "Apache Full"
+sudo ufw allow 22
+sudo ufw status
 
 echo "--------------AUTOR  EDU-----------------"
 
