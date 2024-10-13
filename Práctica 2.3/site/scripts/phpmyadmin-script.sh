@@ -1,6 +1,3 @@
-```bash
-
-
 #!/bin/bash
 
 #Script para automatizar la instalación y configuración de PhpMyAdmin.
@@ -29,7 +26,7 @@ sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
 passwdmysqlroot=$(dialog --title "Contraseña para root en mysql" \
     --stdout \
     --inputbox "Password (8 carac.mayus-minus-núm-signo)" 0 50)
-  #Llamo a la función:
+  #Llamo a la funcion:
   acabar
 
 sqlcomandos="alter user 'root'@'localhost' identified with caching_sha2_password by '$passwdmysqlroot';
@@ -49,13 +46,13 @@ sudo systemctl restart apache2
 usuariophp=$(dialog --title "Nuevo usuario para mysql" \
     --stdout \
     --inputbox "Nombre" 0 0)
-  #Llamo a la función:
+  #Llamo a la funcion:
   acabar
 
 passwdmysqlphp=$(dialog --title "Contraseña para el nuevo usuario" \
     --stdout \
     --inputbox "Password (8 carac.mayus-minus-núm-signo)" 0 50)
-  #Llamo a la función:
+  #Llamo a la funcion:
   acabar
 
 #Ahora creamos un nuevo usuario para el acceso a phpmyadmin
@@ -85,7 +82,7 @@ Require valid-user" | sudo tee /usr/share/phpmyadmin/.htaccess
 usuario=$(dialog --title "Datos para el archivo .htpasswd" \
     --stdout \
     --inputbox "Nombre del usuario" 0 0)
-  #Llamo a la función:
+  #Llamo a la funcion:
   acabar
 
 #Aseguramos la instancia de phpMyAdmin y reiniciamos
@@ -100,5 +97,3 @@ dialog --title "Usuario de la cuenta y la contraseña adicional que hemos config
   --msgbox "En nuestro navegador pondremos todo seguido: $ip/phphmyadmin" 0 50
 clear
 exit 0
-
-```

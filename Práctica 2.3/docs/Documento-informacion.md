@@ -51,6 +51,7 @@ Automatizar la instalación y configuración de PhpMyAdmin mediante un script pr
 
 - **Nos instala phpMyAdmin**
     1-  Instala phpMyAdmin junto con las extensiones PHP necesarias `(php-mbstring,   php-zip, php-gd, php-json, php-curl).`
+
     2- Configura phpMyAdmin para que funcione con Apache.
 
     ![php-apache](img/php-apache.png)
@@ -60,8 +61,11 @@ Automatizar la instalación y configuración de PhpMyAdmin mediante un script pr
     3- Habilita la extensión `mbstring` y reinicia Apache.
 
 - **Nos configura automáticamente el acceso por contraseña para la cuenta root de MySQL**
+  
     1- Cambia el método de autenticación del usuario root de MySQL de auth_socket a `caching_sha2_password.`
+
 - **Nos configura también el acceso por contraseña para un usuario dedicado de MySQL**
+  
     1- Crea un `nuevo usuario de MySQL` con una contraseña segura.
 
     ![users-mysql](img/usuarios-mysql.png)
@@ -71,6 +75,7 @@ Automatizar la instalación y configuración de PhpMyAdmin mediante un script pr
     ![privilegios](img/privilegios.png)
 
 - **Nos asegurando nuestra Instancia de phpMyAdmin**
+  
     1- Habilita el uso de sobrescrituras de archivos `.htaccess` en la configuración de Apache para phpMyAdmin.
 
     ![habilit.htaccess](img/habilit.htaccess.png)

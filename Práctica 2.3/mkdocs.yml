@@ -29,6 +29,10 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
 mardown_extensions:
+  - codehilite:
+      guess_lang: false
+      linemus: true
+
   - pymdownx.highlight:
       anchor_linemus: true
   - pymdownx.inlinehilite
