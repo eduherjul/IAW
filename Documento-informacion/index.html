@@ -11,6 +11,8 @@
       
       
       
+        <link rel="prev" href="..">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Ssl conf .conf - Edu-mkdocs</title>
+        <title>Documento explicativo - Edu-mkdocs</title>
       
     
     
@@ -61,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="purle">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purle">
   
     
     
@@ -71,6 +73,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#php-practica-23-instalar-configurar-y-securizar-phpmyadmin" class="md-skip">
+          Saltar a contenido
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -104,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ssl conf .conf
+              Documento explicativo
             
           </span>
         </div>
@@ -117,7 +124,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="purle"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purle"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -205,9 +212,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../Documento%20t%C3%A9cnico/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -281,9 +290,29 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Documento%20t%C3%A9cnico/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Documento explicativo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -292,6 +321,73 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1" class="md-nav__link">
+    PASO 1
+  </a>
+  
+    <nav class="md-nav" aria-label="PASO 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-del-conjunto-de-sofware-lamp" class="md-nav__link">
+    Instalación del conjunto de sofware LAMP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2" class="md-nav__link">
+    PASO 2
+  </a>
+  
+    <nav class="md-nav" aria-label="PASO 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatizamos-la-instalacion-y-configuracion-de-phpmyadmin-mediante-un-script" class="md-nav__link">
+    Automatizamos la instalación y configuración de PhpMyAdmin mediante un script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-este-script-nos-realiza-las-siguientes-tareas-automaticamente" class="md-nav__link">
+    En este script nos realiza las siguientes tareas automáticamente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -313,6 +409,63 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1" class="md-nav__link">
+    PASO 1
+  </a>
+  
+    <nav class="md-nav" aria-label="PASO 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-del-conjunto-de-sofware-lamp" class="md-nav__link">
+    Instalación del conjunto de sofware LAMP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2" class="md-nav__link">
+    PASO 2
+  </a>
+  
+    <nav class="md-nav" aria-label="PASO 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatizamos-la-instalacion-y-configuracion-de-phpmyadmin-mediante-un-script" class="md-nav__link">
+    Automatizamos la instalación y configuración de PhpMyAdmin mediante un script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-este-script-nos-realiza-las-siguientes-tareas-automaticamente" class="md-nav__link">
+    En este script nos realiza las siguientes tareas automáticamente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -327,111 +480,78 @@
                   
 
 
-  <h1>Ssl conf .conf</h1>
+<h1 id="php-practica-23-instalar-configurar-y-securizar-phpmyadmin">PHP Práctica 2.3: Instalar, configurar y securizar phpMyAdmin</h1>
+<h2 id="paso-1"><strong>PASO 1</strong></h2>
+<h3 id="instalacion-del-conjunto-de-sofware-lamp">Instalación del conjunto de sofware LAMP</h3>
+<div style="text-align: justify">
 
-<pre><code class="language-bash">
-#!/bin/bash
+Un script de instalación de LAMP automatiza la instalación y configuración de los componentes esenciales de la pila LAMP (Linux, Apache, MySQL, PHP) en un sistema Linux, evitando que tengas que ejecutar manualmente cada comando.
+Este script realiza todas las acciones necesarias, como la actualización del sistema, la instalación de paquetes, la configuración de servicios.
 
-#Script para configurar un nuevo archivo en /etc/apache2/sites-available/xxx-ssl.conf
-#Script para configurar un nuevo archivo en /etc/apache2/sites-available/xxx.conf
+</div>
 
-#Instalación de dialog
-sudo apt install dialog -y
+<p>** Puedes ver el script <a href="../Instalacion-LAMP/">aquí</a></p>
+<p><a href="scripts/Instalacion-LAMP.sh" download><strong>DESCARGAR</strong></a></p>
+<p>Lo comprobamos con las versiones:</p>
+<p><img alt="Versiones" src="../img/versiones.png" /></p>
+<p>Comprobamos el estado de apache y ajustamos la configuración del firewall:</p>
+<p><img alt="Estado-firewall" src="../img/estado-firewall.png" /></p>
+<p>Comprobamos en el navegador que también nos funciona:</p>
+<p><img alt="Apache" src="../img/apache.png" /></p>
+<p>Ahora vamos a ver la página web predeterminada de PHP:
+Creamos un archivo con el nombre veo.php</p>
+<p><code>echo "&lt;?php
+phpinfo();" | sudo tee /var/www/html/veo.php</code></p>
+<p>Para probarlo nos vamos a muestro navegador web y accedemos al nombre de dominio o dirección IP de nuestro servidor, seguido del nombre del script, que en nuestro caso es <code>veo.php</code>:</p>
+<p><img alt="php" src="../img/php.png" /></p>
+<h2 id="paso-2"><strong>PASO 2</strong></h2>
+<h3 id="automatizamos-la-instalacion-y-configuracion-de-phpmyadmin-mediante-un-script">Automatizamos la instalación y configuración de PhpMyAdmin mediante un script</h3>
+<div style="text-align: justify">
 
-#Función para capturar el código de retorno del diálogo
-function acabar() {
-  exit_status=$?
-  # Verificar si se seleccionó &quot;Cancelar&quot;
-  if [ $exit_status -ne 0 ]; then
-    clear
-    echo &quot;Operación cancelada&quot;
-    exit 1
-  fi
-}
+Automatizar la instalación y configuración de PhpMyAdmin mediante un script proporciona eficiencia, consistencia, seguridad y escalabilidad, lo que es extremadamente útil para administradores de sistemas y equipos de desarrollo que gestionan múltiples entornos o despliegues frecuentes.
 
-#Configurar ssl.conf
-dialog --title &quot;SSL/TSL&quot; \
-  --yesno &quot;¿Quieres crear un archivo de configuración HTTPS?&quot; 0 0
-sino=$?
+</div>
 
-if [ &quot;$sino&quot; -eq 0 ]; then
-
-  #Introducimos el nombre del fichero ssl.conf
-  nomssl=$(dialog --title &quot;Configuramos un nuevo /etc/apache2/sites-available/xxx-ssl.conf&quot; \
-    --stdout \
-    --inputbox &quot;Nombre del archivo&quot; 0 0)
-  #Llamo a la funcion:
-  acabar
-
-  #configuramos un nuevo ssl.conf
-  echo &quot;&lt;IfModule mod_ssl.c&gt;
-        &lt;VirtualHost *:443&gt;
-                #ServerName practica-https.local
-                DocumentRoot /var/www/html
-                DirectoryIndex index.php index.html
-                ErrorLog ${APACHE_LOG_DIR}/error.log
-                CustomLog ${APACHE_LOG_DIR}/access.log combined
-                SSLEngine on
-                SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
-                SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
-        &lt;/VirtualHost&gt;
-&lt;/IfModule&gt;&quot; | sudo tee /etc/apache2/sites-available/&quot;$nomssl&quot;-ssl.conf
-
-  #Habilitamos el virtual host que acabamos de configurar.
-  sudo a2ensite &quot;$nomssl&quot;-ssl.conf
-
-  #Habilitamos el módulo SSL en Apache.
-  sudo a2enmod ssl
-
-fi
-
-#Configurar .conf
-dialog --title &quot;HTTP&quot; \
-  --yesno &quot;¿Quieres crear un archivo de configuración HTTP?&quot; 0 0
-sino=$?
-
-if [ &quot;$sino&quot; -eq 0 ]; then
-
-  #Introducimos el nombre del fichero ssl.conf
-  nomhttp=$(dialog --title &quot;Configuramos un nuevo /etc/apache2/sites-available/xxx.conf&quot; \
-    --stdout \
-    --inputbox &quot;Nombre del archivo&quot; 0 0)
-  #Llamo a la funcion:
-  acabar
-
-  #configuramos un nuevo .conf
-  echo &quot;&lt;VirtualHost *:80&gt;
-    #ServerName practica-https.local
-    DocumentRoot /var/www/html
-    #Redirige alpuerto 443 (HTTPS)
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-    RewriteEngineOn
-    RewriteCond%{HTTPS} off
-    RewriteRule^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-&lt;/VirtualHost&gt;&quot; | sudo tee /etc/apache2/sites-available/&quot;$nomhttp&quot;.conf
-
-  #Para que servidor web Apache pueda hacer redirección de HTTP a HTTPS habilitamos módulo rewrite (Apache).
-  sudo a2enmod rewrite
-
-  #Reiniciamos el servicio de Apache
-  sudo systemctl restart apache2.service
-
-  #Comprobamos:
-  clear
-  sudo systemctl status apache2.service
-  read -p &quot;ENTER para continuar&quot;
-
-fi
-
-#Comprobar que el puerto 443 está abierto en las reglas del firewall para permitir el tráfico HTTPS.
-dialog --title &quot;En las reglas de Firewall (sudo ufw status)&quot; \
-  --msgbox &quot;Comprobar que el puerto 443 está abierto para tráfico HTTPS&quot; 5 60
-
-clear
-exit 0
-
-</code></pre>
+<h3 id="en-este-script-nos-realiza-las-siguientes-tareas-automaticamente">En este script nos realiza las siguientes tareas automáticamente</h3>
+<ul>
+<li>
+<p><strong>Nos instala phpMyAdmin</strong>
+    1-  Instala phpMyAdmin junto con las extensiones PHP necesarias <code>(php-mbstring,   php-zip, php-gd, php-json, php-curl).</code>
+    2- Configura phpMyAdmin para que funcione con Apache.</p>
+<p><img alt="php-apache" src="../img/php-apache.png" /></p>
+<p><img alt="php-conf-apache" src="../img/conf-php-apache.png" /></p>
+<p>3- Habilita la extensión <code>mbstring</code> y reinicia Apache.</p>
+</li>
+<li>
+<p><strong>Nos configura automáticamente el acceso por contraseña para la cuenta root de MySQL</strong>
+    1- Cambia el método de autenticación del usuario root de MySQL de auth_socket a <code>caching_sha2_password.</code></p>
+</li>
+<li>
+<p><strong>Nos configura también el acceso por contraseña para un usuario dedicado de MySQL</strong>
+    1- Crea un <code>nuevo usuario de MySQL</code> con una contraseña segura.</p>
+<p><img alt="users-mysql" src="../img/usuarios-mysql.png" /></p>
+<p>2- Otorga al nuevo usuario los <code>privilegios</code> apropiados para gestionar las bases de datos a través de phpMyAdmin.</p>
+<p><img alt="privilegios" src="../img/privilegios.png" /></p>
+</li>
+<li>
+<p><strong>Nos asegurando nuestra Instancia de phpMyAdmin</strong>
+    1- Habilita el uso de sobrescrituras de archivos <code>.htaccess</code> en la configuración de Apache para phpMyAdmin.</p>
+<p><img alt="habilit.htaccess" src="../img/habilit.htaccess.png" /></p>
+<p>2- Crea un archivo <code>.htaccess</code> en el directorio de phpMyAdmin para implementar autenticación básica.</p>
+<p><img alt="cre.htaccess" src="../img/crea.htaccess.png" /></p>
+<p>3- Crea un archivo .<code>htpasswd</code> para almacenar las credenciales de usuario y contraseña.</p>
+<p><img alt="pass.htpasswd" src="../img/pass.htpasswd.png" /></p>
+<p>4- Reinicia Apache para aplicar los cambios.</p>
+</li>
+</ul>
+<p>** Puedes ver el script <a href="../phpmyadmin-script/">aquí</a></p>
+<p><a href="scripts/phpmyadmin-script.sh" download><strong>DESCARGAR</strong></a></p>
+<p>Vemos el primer control de acceso para phpMyAdmin</p>
+<p><img alt="control1" src="../img/control1.png" /></p>
+<p>Ahora el segundo y habitual</p>
+<p><img alt="control2" src="../img/control2.png" /></p>
+<p>Finalmente estamos dentro para gestionar nuestras BBDD</p>
+<p><img alt="dentro" src="../img/dentro.png" /></p>
 
 
 

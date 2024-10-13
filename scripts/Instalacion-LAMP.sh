@@ -19,16 +19,22 @@ sudo apt install apache2 -y
 
 echo "Instalando PHP.."
 sudo apt install php libapache2-mod-php php-mysql -y
+sudo apt install php-cli php-cgi php-mysql php-pgsql -y
 
 #Instalación MySQL###########################
 
 echo "Instalando MySQL-server.."
 sudo apt install mysql-server -y
 
-#Reinicio del servicio apache##############
+#Reinicio del servicio apache y comprobación del estado##############
 
 echo "Reiniciando apache.."
-sudo systemctl restart apache2
+sudo systemctl restart apache2.service
+sudo systemctl --no-pager status apache2.service
+sudo ufw enable
+sudo ufw allow in "Apache Full"
+sudo ufw allow 22
+sudo ufw status
 
 echo "--------------AUTOR  EDU-----------------"
 exit 0
