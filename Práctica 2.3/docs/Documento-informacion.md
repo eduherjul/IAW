@@ -1,4 +1,4 @@
-# PHP Práctica 3: Instalar, configurar y securizar phpMyAdmin
+# PHP Práctica 2.3: Instalar, configurar y securizar phpMyAdmin
 
 ## **PASO 1**
 
