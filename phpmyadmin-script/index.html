@@ -359,7 +359,7 @@ sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
 passwdmysqlroot=$(dialog --title &quot;Contraseña para root en mysql&quot; \
     --stdout \
     --inputbox &quot;Password (8 carac.mayus-minus-núm-signo)&quot; 0 50)
-  #Llamo a la funcion:
+  #Llamo a la función:
   acabar
 
 sqlcomandos=&quot;alter user 'root'@'localhost' identified with caching_sha2_password by '$passwdmysqlroot';
@@ -379,17 +379,18 @@ sudo systemctl restart apache2
 usuariophp=$(dialog --title &quot;Nuevo usuario para mysql&quot; \
     --stdout \
     --inputbox &quot;Nombre&quot; 0 0)
-  #Llamo a la funcion:
+  #Llamo a la función:
   acabar
 
 passwdmysqlphp=$(dialog --title &quot;Contraseña para el nuevo usuario&quot; \
     --stdout \
     --inputbox &quot;Password (8 carac.mayus-minus-núm-signo)&quot; 0 50)
-  #Llamo a la funcion:
+  #Llamo a la función:
   acabar
 
 #Ahora creamos un nuevo usuario para el acceso a phpmyadmin
 sqlcomandosphp=&quot;create user '$usuariophp'@'localhost' identified with caching_sha2_password by '$passwdmysqlphp';
+GRANT ALL PRIVILEGES ON *.* TO '$usuariophp'@'localhost';
 flush privileges;&quot;
 
 #Ejecutamos los comandos SQL en mysql
@@ -415,14 +416,8 @@ Require valid-user&quot; | sudo tee /usr/share/phpmyadmin/.htaccess
 usuario=$(dialog --title &quot;Datos para el archivo .htpasswd&quot; \
     --stdout \
     --inputbox &quot;Nombre del usuario&quot; 0 0)
-  #Llamo a la funcion:
+  #Llamo a la función:
   acabar
-
-#clave=$(dialog --title &quot;Datos para el archivo .htpasswd&quot; \
-  #--stdout \
-  #--inputbox &quot;Password (8 carac.mayus-minus-núm-signo)&quot; 0 50)
-#Llamo a la funcion:
-#acabar
 
 #Aseguramos la instancia de phpMyAdmin y reiniciamos
 sudo htpasswd -c /etc/phpmyadmin/.htpasswd &quot;$usuario&quot;

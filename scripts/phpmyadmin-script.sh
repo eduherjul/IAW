@@ -57,6 +57,7 @@ passwdmysqlphp=$(dialog --title "Contraseña para el nuevo usuario" \
 
 #Ahora creamos un nuevo usuario para el acceso a phpmyadmin
 sqlcomandosphp="create user '$usuariophp'@'localhost' identified with caching_sha2_password by '$passwdmysqlphp';
+GRANT ALL PRIVILEGES ON *.* TO '$usuariophp'@'localhost';
 flush privileges;"
 
 #Ejecutamos los comandos SQL en mysql
