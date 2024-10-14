@@ -516,26 +516,26 @@ Automatizar la instalación y configuración de PhpMyAdmin mediante un script pr
 <ul>
 <li>
 <p><strong>Nos instala phpMyAdmin</strong>
-    1-  Instala phpMyAdmin junto con las extensiones PHP necesarias <code>(php-mbstring,   php-zip, php-gd, php-json, php-curl).</code>
-    2- Configura phpMyAdmin para que funcione con Apache.</p>
+    1-  Instala phpMyAdmin junto con las extensiones PHP necesarias <code>(php-mbstring,   php-zip, php-gd, php-json, php-curl).</code></p>
+<p>2- Configura phpMyAdmin para que funcione con Apache.</p>
 <p><img alt="php-apache" src="../img/php-apache.png" /></p>
 <p><img alt="php-conf-apache" src="../img/conf-php-apache.png" /></p>
 <p>3- Habilita la extensión <code>mbstring</code> y reinicia Apache.</p>
 </li>
 <li>
-<p><strong>Nos configura automáticamente el acceso por contraseña para la cuenta root de MySQL</strong>
-    1- Cambia el método de autenticación del usuario root de MySQL de auth_socket a <code>caching_sha2_password.</code></p>
+<p><strong>Nos configura automáticamente el acceso por contraseña para la cuenta root de MySQL</strong></p>
+<p>1- Cambia el método de autenticación del usuario root de MySQL de auth_socket a <code>caching_sha2_password.</code></p>
 </li>
 <li>
-<p><strong>Nos configura también el acceso por contraseña para un usuario dedicado de MySQL</strong>
-    1- Crea un <code>nuevo usuario de MySQL</code> con una contraseña segura.</p>
+<p><strong>Nos configura también el acceso por contraseña para un usuario dedicado de MySQL</strong></p>
+<p>1- Crea un <code>nuevo usuario de MySQL</code> con una contraseña segura.</p>
 <p><img alt="users-mysql" src="../img/usuarios-mysql.png" /></p>
 <p>2- Otorga al nuevo usuario los <code>privilegios</code> apropiados para gestionar las bases de datos a través de phpMyAdmin.</p>
 <p><img alt="privilegios" src="../img/privilegios.png" /></p>
 </li>
 <li>
-<p><strong>Nos asegurando nuestra Instancia de phpMyAdmin</strong>
-    1- Habilita el uso de sobrescrituras de archivos <code>.htaccess</code> en la configuración de Apache para phpMyAdmin.</p>
+<p><strong>Nos asegurando nuestra Instancia de phpMyAdmin</strong></p>
+<p>1- Habilita el uso de sobrescrituras de archivos <code>.htaccess</code> en la configuración de Apache para phpMyAdmin.</p>
 <p><img alt="habilit.htaccess" src="../img/habilit.htaccess.png" /></p>
 <p>2- Crea un archivo <code>.htaccess</code> en el directorio de phpMyAdmin para implementar autenticación básica.</p>
 <p><img alt="cre.htaccess" src="../img/crea.htaccess.png" /></p>
