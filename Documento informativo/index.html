@@ -470,6 +470,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cambiamos-las-siguientes-lineas-para-apuntar-al-servidor-2-mysql-en-lugar-de-usar-localhost" class="md-nav__link">
+    Cambiamos las siguientes líneas para apuntar al "Servidor 2" (MySQL) en lugar de usar "localhost".
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configuramos-apache-para-wordpress-creando-un-archivo-de-configuracion-para-el-sitio-de-wordpress-en-apache" class="md-nav__link">
     Configuramos Apache para WordPress creando un archivo de configuración para el sitio de WordPress en Apache.
   </a>
@@ -696,6 +703,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cambiamos-las-siguientes-lineas-para-apuntar-al-servidor-2-mysql-en-lugar-de-usar-localhost" class="md-nav__link">
+    Cambiamos las siguientes líneas para apuntar al "Servidor 2" (MySQL) en lugar de usar "localhost".
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configuramos-apache-para-wordpress-creando-un-archivo-de-configuracion-para-el-sitio-de-wordpress-en-apache" class="md-nav__link">
     Configuramos Apache para WordPress creando un archivo de configuración para el sitio de WordPress en Apache.
   </a>
@@ -779,15 +793,11 @@
 <h3 id="acceder-a-mysql-como-administrador-root">Acceder a Mysql como administrador root.</h3>
 <p><code>sudo mysql -u root</code></p>
 <h3 id="crear-la-bbdd">Crear la BBDD</h3>
-<pre> 
-   <code>
-   CREATE DATABASE wordpress_db;
-   CREATE USER 'wp_user'@'%' IDENTIFIED BY 'tu_contraseña_segura';
-   GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wp_user'@'%';
-   FLUSH PRIVILEGES;
-   EXIT;
-   </pre>
-<p></code> </p>
+<p><code>CREATE DATABASE wordpress_db;</code></p>
+<p><code>CREATE USER 'wp_user'@'%' IDENTIFIED BY 'tu_contraseña_segura';</code></p>
+<p><code>GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wp_user'@'%';</code></p>
+<p><code>FLUSH PRIVILEGES;</code></p>
+<p><code>EXIT;</code></p>
 <p><img alt="alt text" src="../image.png" /></p>
 <h3 id="permitiremos-las-conexiones-remotas">Permitiremos las conexiones remotas</h3>
 <p><code>sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf</code></p>
@@ -804,50 +814,32 @@
 <h2 id="paso-2-instalar-apache-php-las-extensiones-necesarias-y-descargar-e-instalar-wordpress">PASO 2: Instalar Apache, PHP, las extensiones necesarias y descargar e instalar Wordpress</h2>
 <h3 id="instalamos-apache-que-sera-el-servidor-web-donde-se-alojara-wordpress">Instalamos Apache que será el servidor web donde se alojará Wordpress.</h3>
 <p><code>sudo apt install apache2 -y</code></p>
-<h5 id="instalamos-php-y-las-extensiones-necesarias"><strong>Instalamos PHP y las extensiones necesarias.</strong></h5>
-<pre>
-   <code>
-   sudo apt update
-   sudo apt install apache2 \
-                 ghostscript \
-                 libapache2-mod-php \
-                 php \
-                 php-bcmath \
-                 php-curl \
-                 php-imagick \
-                 php-intl \
-                 php-json \
-                 php-mbstring \
-                 php-mysql \
-                 php-xml \
-                 php-zip
-   </pre>
-<p></code></p>
+<h4 id="instalamos-php-y-las-extensiones-necesarias">Instalamos PHP y las extensiones necesarias.</h4>
+<p><code>sudo apt update</code></p>
+<p><code>sudo apt install apache2 ghostscript libapache2-mod-php</code></p>
+<p><code>sudo apt install php php-bcmath php-curl php-imagick php-intl</code></p>
+<p><code>sudo apt install php-json php-mbstring php-mysql php-xml php-zip</code></p>
 <h3 id="reiniciamos-apache-para-que-los-cambios-surtan-efecto">Reiniciamos apache para que los cambios surtan efecto.</h3>
 <p><code>sudo systemctl restart apache2.service</code></p>
 <h3 id="descargamos-la-ultima-version-de-wordpress-y-colocamos-en-la-carpeta-web-de-apache">Descargamos la última versión de WordPress y colocamos en la carpeta web de Apache.</h3>
-<p><code>cd /tmp</code>
-<code>wget https://wordpress.org/latest.tar.gz</code>
-<code>tar -xzf latest.tar.gz</code>
-<code>sudo mv wordpress /var/www/html/</code></p>
+<p><code>cd /tmp</code></p>
+<p><code>wget https://wordpress.org/latest.tar.gz</code></p>
+<p><code>tar -xzf latest.tar.gz</code></p>
+<p><code>sudo mv wordpress /var/www/html/</code></p>
 <h3 id="cambiamos-la-propiedad-y-permisos-de-los-archivos">Cambiamos la propiedad y permisos de los archivos.</h3>
-<p><code>sudo chown -R www-data:www-data /var/www/html/wordpress</code>
-<code>sudo chmod -R 755 /var/www/html/wordpress</code></p>
+<p><code>sudo chown -R www-data:www-data /var/www/html/wordpress</code></p>
+<p><code>sudo chmod -R 755 /var/www/html/wordpress</code></p>
 <h3 id="configurar-wordpress-para-conectarse-a-la-base-de-datos">Configurar WordPress para conectarse a la base de datos.</h3>
 <p><code>cd /var/www/html/wordpress</code></p>
 <h3 id="copiamos-el-archivo-de-configuracion">Copiamos el archivo de configuración.</h3>
 <p><code>cp wp-config-sample.php wp-config.php</code></p>
 <h3 id="editamos-el-archivo-de-configuracion-de-wordpress">Editamos el archivo de configuración de WordPress.</h3>
 <p><code>sudo nano wp-config.php</code></p>
-<p><strong>Cambia las siguientes líneas para apuntar al "Servidor 2" (MySQL) en lugar de usar "localhost".</strong></p>
-<pre>
-<code>
-define('DB_NAME', 'wordpress_db');     // Nombre de la base de datos
-define('DB_USER', 'wp_user');          // Usuario de la base de datos
-define('DB_PASSWORD', 'tu_contraseña_segura'); // Contraseña del usuario
-define('DB_HOST', 'IP_DEL_SERVIDOR_2'); // La IP del Servidor 2 (donde está MySQL)
-</pre>
-<p></code></p>
+<h3 id="cambiamos-las-siguientes-lineas-para-apuntar-al-servidor-2-mysql-en-lugar-de-usar-localhost">Cambiamos las siguientes líneas para apuntar al "Servidor 2" (MySQL) en lugar de usar "localhost".</h3>
+<p><code>define('DB_NAME', 'wordpress_db');     // Nombre de la base de datos</code></p>
+<p><code>define('DB_USER', 'wp_user');          // Usuario de la base de datos</code></p>
+<p><code>define('DB_PASSWORD', 'tu_contraseña_segura'); // Contraseña del usuario</code></p>
+<p><code>define('DB_HOST', 'IP_DEL_SERVIDOR_2'); // La IP del Servidor 2 (donde está MySQL)</code></p>
 <p><img alt="alt text" src="../image-3.png" /></p>
 <h3 id="configuramos-apache-para-wordpress-creando-un-archivo-de-configuracion-para-el-sitio-de-wordpress-en-apache">Configuramos Apache para WordPress creando un archivo de configuración para el sitio de WordPress en Apache.</h3>
 <p><code>sudo nano /etc/apache2/sites-available/wordpress.conf</code></p>
