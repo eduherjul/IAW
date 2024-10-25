@@ -3,7 +3,7 @@ site_name: Edu-mkdocs
 site-description: Instalar y configurar Wordpress
 nav:
   - Inicio: index.md
-  - Documento explicativo: Documento informativo.md
+  - Documento informativo: Documento informativo.md
 theme:
   name: material
   language: es
