@@ -98,9 +98,7 @@ De esta forma, con un script descargamos mysql y el servidor queda listo para so
 
 ### Configurar WordPress para conectarse a la base de datos.
 
-   ```bash
-   cd /var/www/html/wordpress
-   ```
+`cd /var/www/html/wordpress`
 
 ### Copiamos el archivo de configuración.
 
