@@ -18,7 +18,7 @@
     
     
       
-        <title>Instalacion LAMP - Edu-mkdocs</title>
+        <title>Práctica 4 Instalar y configurar Wordpress - Edu-mkdocs</title>
       
     
     
@@ -61,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purle">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purle">
   
     
     
@@ -71,6 +71,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#practica-4-instalar-y-configurar-wordpress" class="md-skip">
+          Saltar a contenido
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instalacion LAMP
+              Práctica 4 Instalar y configurar Wordpress
             
           </span>
         </div>
@@ -117,7 +122,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purle"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purle"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -207,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Documento-informacion/" class="md-tabs__link">
+      <a href="../Documento-informativo.md" class="md-tabs__link">
         
   
     
@@ -283,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Documento-informacion/" class="md-nav__link">
+      <a href="../Documento-informativo.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -313,6 +318,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-configurar-el-servidor-2-mysql" class="md-nav__link">
+    PASO 1: Configurar el Servidor 2 (Mysql)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-instalar-apache-php-las-extensiones-necesarias-y-descargar-e-instalar-wordpress" class="md-nav__link">
+    PASO 2: Instalar Apache, PHP, las extensiones necesarias y descargar e instalar Wordpress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-finalizamos-la-instalacion-de-wordpress" class="md-nav__link">
+    Paso 3: Finalizamos la instalación de WordPress
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -327,52 +363,175 @@
                   
 
 
-  <h1>Instalacion LAMP</h1>
-
-<pre><code class="language-bash">
-
-#!/bin/bash
-
-#############################################
-echo &quot;Script para automatizar la instalación de LAMP para Debian/Ubuntu o derivados&quot;
-echo &quot;Apache&quot;
-echo &quot;MySQL&quot;
-echo &quot;PHP&quot;
-
-#############################################
-#Actualización de sistema####################
-
-echo &quot;Actualizando el sistema..&quot;
-sudo apt update -y &amp;&amp; sudo apt dist-upgrade -y &amp;&amp; sudo apt autoremove -y
-#Instalación de Apache#######################
-
-echo &quot;Instalando apache..&quot;
-sudo apt install apache2 -y
-#Instalación de PHP##########################
-
-echo &quot;Instalando PHP..&quot;
-sudo apt install php libapache2-mod-php php-mysql -y
-sudo apt install php-cli php-cgi php-mysql php-pgsql -y
-
-#Instalación MySQL###########################
-
-echo &quot;Instalando MySQL-server..&quot;
-sudo apt install mysql-server -y
-
-#Reinicio del servicio apache y comprobación del estado##############
-
-echo &quot;Reiniciando apache..&quot;
-sudo systemctl restart apache2.service
-sudo systemctl --no-pager status apache2.service
-sudo ufw enable
-sudo ufw allow in &quot;Apache Full&quot;
-sudo ufw allow 22
-sudo ufw status
-
-echo &quot;--------------AUTOR  EDU-----------------&quot;
-exit 0
-
-</code></pre>
+<h1 id="practica-4-instalar-y-configurar-wordpress">Práctica 4 Instalar y configurar Wordpress</h1>
+<h2 id="paso-1-configurar-el-servidor-2-mysql">PASO 1: Configurar el Servidor 2 (Mysql)</h2>
+<ul>
+<li><strong>Actualizar el sistema e instalar Mysql.</strong></li>
+</ul>
+<p><code>bash
+   sudo apt update &amp;&amp; sudo apt upgrade -y</code></p>
+<ul>
+<li><strong>Instalar Mysql.</strong></li>
+</ul>
+<p><code>bash
+   sudo apt install mysql-server</code></p>
+<ul>
+<li><strong>Acceder a Mysql como administrador root.</strong></li>
+</ul>
+<p><code>bash
+   sudo mysql -u root</code></p>
+<ul>
+<li><strong>Crear la BBDD</strong></li>
+</ul>
+<p><code>bash
+   CREATE DATABASE wordpress_db;
+   CREATE USER 'wp_user'@'%' IDENTIFIED BY 'tu_contraseña_segura';
+   GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wp_user'@'%';
+   FLUSH PRIVILEGES;
+   EXIT;</code></p>
+<p><img alt="alt text" src="../image.png" /></p>
+<ul>
+<li><strong>Permitiremos las conexiones remotas</strong></li>
+</ul>
+<p><code>bash
+   sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf</code></p>
+<p>Buscaremos la línea que contiene <code>bind-address</code> y la cambiaremos de <code>127.0.0.1</code> a <code>0.0.0.0</code> para permitir conexiones desde cualquier dirección IP.</p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<ul>
+<li><strong>Reiniciaremos Mysql</strong></li>
+</ul>
+<p><code>bash
+   sudo systemctl restart mysql</code></p>
+<ul>
+<li><strong>Abriremos el puerto Mysql (3306) en el firewall</strong></li>
+</ul>
+<p><code>bash
+   sudo ufw allow 3306</code></p>
+<p><img alt="alt text" src="../image-2.png" /></p>
+<p>De esta forma, con un script descargamos mysql y el servidor queda listo para soportar una instalación de WordPress, con acceso remoto a la BBDD si es necesario.</p>
+<p>** Puedes ver el script <a href="../Mysql-para-wordpress/">aquí</a></p>
+<p><a href="../descargas/Mysql-para-wordpress.sh">Descargar el archivo</a></p>
+<h2 id="paso-2-instalar-apache-php-las-extensiones-necesarias-y-descargar-e-instalar-wordpress">PASO 2: Instalar Apache, PHP, las extensiones necesarias y descargar e instalar Wordpress</h2>
+<ul>
+<li><strong>Instalamos Apache que será el servidor web donde se alojará Wordpress.</strong></li>
+</ul>
+<p><code>bash
+   sudo apt install apache2 -y</code></p>
+<ul>
+<li><strong>Instalamos PHP y las extensiones necesarias.</strong></li>
+</ul>
+<p><code>bash
+   sudo apt update
+   sudo apt install apache2 \
+                 ghostscript \
+                 libapache2-mod-php \
+                 php \
+                 php-bcmath \
+                 php-curl \
+                 php-imagick \
+                 php-intl \
+                 php-json \
+                 php-mbstring \
+                 php-mysql \
+                 php-xml \
+                 php-zip</code></p>
+<ul>
+<li><strong>Reiniciamos apache para que los cambios surtan efecto.</strong></li>
+</ul>
+<p><code>bash
+   sudo systemctl restart apache2.service</code></p>
+<ul>
+<li><strong>Descargamos la última versión de WordPress y colocamos en la carpeta web de Apache.</strong></li>
+</ul>
+<p><code>bash
+   cd /tmp
+   wget https://wordpress.org/latest.tar.gz
+   tar -xzf latest.tar.gz
+   sudo mv wordpress /var/www/html/</code></p>
+<ul>
+<li><strong>Cambiamos la propiedad y permisos de los archivos.</strong></li>
+</ul>
+<p><code>bash
+   sudo chown -R www-data:www-data /var/www/html/wordpress
+   sudo chmod -R 755 /var/www/html/wordpress</code></p>
+<ul>
+<li><strong>Configurar WordPress para conectarse a la base de datos.</strong></li>
+</ul>
+<p><code>bash
+   cd /var/www/html/wordpress</code></p>
+<ul>
+<li><strong>Copiamos el archivo de configuración.</strong></li>
+</ul>
+<p><code>bash
+   cp wp-config-sample.php wp-config.php</code></p>
+<ul>
+<li><strong>Editamos el archivo de configuración de WordPress.</strong></li>
+</ul>
+<p><code>bash
+   sudo nano wp-config.php</code></p>
+<ul>
+<li><strong>Cambia las siguientes líneas para apuntar al </strong>Servidor 2<strong> (MySQL) en lugar de usar <code>localhost</code>.</strong></li>
+</ul>
+<p><code>bash  
+   define('DB_NAME', 'wordpress_db');     // Nombre de la base de datos
+   define('DB_USER', 'wp_user');          // Usuario de la base de datos
+   define('DB_PASSWORD', 'tu_contraseña_segura'); // Contraseña del usuario
+   define('DB_HOST', 'IP_DEL_SERVIDOR_2'); // La IP del Servidor 2 (donde está MySQL)</code></p>
+<p><img alt="alt text" src="../image-3.png" /></p>
+<ul>
+<li><strong>Configuramos Apache para WordPress creando un archivo de configuración para el sitio de WordPress en Apache.</strong></li>
+</ul>
+<p><code>bash
+   sudo nano /etc/apache2/sites-available/wordpress.conf</code></p>
+<ul>
+<li><strong>Agregamos lo siguiente:</strong></li>
+</ul>
+<p><code>apache
+   &lt;VirtualHost *:80&gt;
+       ServerAdmin admin@tu_dominio.com
+       DocumentRoot /var/www/html/wordpress
+       ServerName tu_dominio.com
+       &lt;Directory /var/www/html/wordpress&gt;
+           Options Indexes FollowSymLinks
+           AllowOverride All
+           Require all granted
+       &lt;/Directory&gt;
+       ErrorLog ${APACHE_LOG_DIR}/error.log
+       CustomLog ${APACHE_LOG_DIR}/access.log combined
+   &lt;/VirtualHost&gt;</code></p>
+<p><img alt="alt text" src="../image-4.png" /></p>
+<ul>
+<li><strong>Luego habilitamos el nuevo sitio de WordPress y el módulo de reescritura de Apache:</strong></li>
+</ul>
+<p><code>bash
+   sudo a2ensite wordpress.conf
+   sudo a2enmod rewrite</code></p>
+<ul>
+<li><strong>Deshabilitamos el sitio predeterminado “It Works” con:</strong></li>
+</ul>
+<p><code>bash
+   sudo a2dissite 000-default</code></p>
+<ul>
+<li><strong>Reiniciamos Apache para aplicar los cambios:</strong></li>
+</ul>
+<p><code>bash
+   sudo systemctl restart apache2</code></p>
+<h2 id="paso-3-finalizamos-la-instalacion-de-wordpress">Paso 3: Finalizamos la instalación de WordPress</h2>
+<ul>
+<li><strong>Abrimos el navegador</strong>: Nos dirigimos a la dirección IP del <strong>Servidor 1</strong> en un navegador (<code>http://IP_DEL_SERVIDOR_1</code>)</li>
+</ul>
+<p><img alt="alt text" src="../image-5.png" />
+<img alt="alt text" src="../image-6.png" />
+<img alt="alt text" src="../image-7.png" />
+<img alt="alt text" src="../image-8.png" />
+De esta forma con un script:</p>
+<ol>
+<li><strong>Automatizamos la instalación</strong> de Apache, PHP y WordPress.</li>
+<li><strong>Configuramos una arquitectura distribuida</strong> con la base de datos en un servidor separado, mejorando rendimiento y seguridad.</li>
+<li><strong>Optimizamos los recursos</strong> al permitir un mejor uso de la CPU y memoria en cada servidor.</li>
+</ol>
+<p>** Puedes ver el script <a href="../Apache-wordpress-php/">aquí</a></p>
+<p><a href="../descargas/Apache-wordpress-php.sh">Descargar el archivo</a></p>
 
 
 

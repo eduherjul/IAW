@@ -18,7 +18,7 @@
     
     
       
-        <title>Phpmyadmin script - Edu-mkdocs</title>
+        <title>Apache wordpress php - Edu-mkdocs</title>
       
     
     
@@ -61,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purle">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purle">
   
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Phpmyadmin script
+              Apache wordpress php
             
           </span>
         </div>
@@ -117,7 +117,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purle"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purle"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -207,7 +207,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Documento-informacion/" class="md-tabs__link">
+      <a href="../Documento-informativo.md" class="md-tabs__link">
         
   
     
@@ -283,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Documento-informacion/" class="md-nav__link">
+      <a href="../Documento-informativo.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -327,13 +327,13 @@
                   
 
 
-  <h1>Phpmyadmin script</h1>
+  <h1>Apache wordpress php</h1>
 
 <pre><code class="language-bash">
 
 #!/bin/bash
 
-#Script para automatizar la instalación y configuración de PhpMyAdmin.
+#Script para instalar y configurar Wordpress con Apache y PHP
 
 #Instalación de dialog
 sudo apt install dialog -y
@@ -342,6 +342,8 @@ sudo apt install dialog -y
 function acabar() {
   exit_status=$?
   # Verificar si se seleccionó &quot;Cancelar&quot;
+
+
   if [ $exit_status -ne 0 ]; then
     clear
     echo &quot;Operación cancelada&quot;
@@ -349,87 +351,115 @@ function acabar() {
   fi
 }
 
-#Actualizamos la memoria caché del sistema
-sudo apt update -y
+#Actualizamos el sistema
+dialog --title &quot;Actualización del sistema update-upgrade&quot; \
+  --yesno &quot;¿Actualizamos?&quot; 0 0
+sino=$?
+if [ $sino -eq 0 ]; then
+  clear
+  sudo apt update -y &amp;&amp; sudo apt dist-upgrade -y &amp;&amp; sudo apt autoremove -y
+fi
 
-#Instalamos estos paquetes
-sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
-
-#Cambiamos la contraseña del usuario root de mysql-server
-passwdmysqlroot=$(dialog --title &quot;Contraseña para root en mysql&quot; \
-    --stdout \
-    --inputbox &quot;Password (8 carac.mayus-minus-núm-signo)&quot; 0 50)
-  #Llamo a la función:
-  acabar
-
-sqlcomandos=&quot;alter user 'root'@'localhost' identified with caching_sha2_password by '$passwdmysqlroot';
-flush privileges;&quot;
-
-#Ejecutamos los comandos SQL en mysql
-sudo mysql -u root -e &quot;$sqlcomandos&quot;
-
-#Habilitar la extensión PHP mbstring
-echo &quot;Activando extensiones de PHP...&quot;
-sudo phpenmod mbstring
-
-#Reiniciamos Apache
-sudo systemctl restart apache2
-
-#Generamos un nuevo usuario y una contraseña en mysql-server para phpmyadmin
-usuariophp=$(dialog --title &quot;Nuevo usuario para mysql&quot; \
-    --stdout \
-    --inputbox &quot;Nombre&quot; 0 0)
-  #Llamo a la función:
-  acabar
-
-passwdmysqlphp=$(dialog --title &quot;Contraseña para el nuevo usuario&quot; \
-    --stdout \
-    --inputbox &quot;Password (8 carac.mayus-minus-núm-signo)&quot; 0 50)
-  #Llamo a la función:
-  acabar
-
-#Ahora creamos un nuevo usuario para el acceso a phpmyadmin
-sqlcomandosphp=&quot;create user '$usuariophp'@'localhost' identified with caching_sha2_password by '$passwdmysqlphp';
-GRANT ALL PRIVILEGES ON *.* TO '$usuariophp'@'localhost';
-flush privileges;&quot;
-
-#Ejecutamos los comandos SQL en mysql
-sudo mysql -u root -p&quot;$passwdmysqlroot&quot; -e &quot;$sqlcomandosphp&quot;
-
-#Habilitamos el uso de anulaciones del archivo .htaccess
-#Agregamos la directiva &quot;AllowOverride All&quot; dentro de la sección &quot;&lt;Directory /usr/share/phpmyadmin&gt;&quot;​​​ del archivo de configuración.
-sudo sed -i '7a\    AllowOverride All' /etc/apache2/conf-available/phpmyadmin.conf
-
-#Habilitamos y reiniciamos apache
-sudo a2enconf phpmyadmin
-sudo systemctl restart apache2.service
-
-#Habilitado el uso de .htaccess para la aplicación, debemos crear uno para implementar seguridad.
-#El archivo lo crearemos dentro del directorio de la aplicación.
-echo &quot;AuthType Basic
-AuthName \&quot;Restricted Files\&quot;
-AuthUserFile /etc/phpmyadmin/.htpasswd
-Require valid-user&quot; | sudo tee /usr/share/phpmyadmin/.htaccess
-
-#La ubicación que hemos seleccionado para el archivo de contraseña es /etc/phpmyadmin/.htpasswd. 
-#Ahora podemos crear este archivo y pasarle un usuario inicial con la utilidad htpasswd:
-usuario=$(dialog --title &quot;Datos para el archivo .htpasswd&quot; \
-    --stdout \
-    --inputbox &quot;Nombre del usuario&quot; 0 0)
-  #Llamo a la función:
-  acabar
-
-#Aseguramos la instancia de phpMyAdmin y reiniciamos
-sudo htpasswd -c /etc/phpmyadmin/.htpasswd &quot;$usuario&quot;
-sudo systemctl restart apache2.service
-
-#Accedemos a la interfaz web  (navegador):
-#Visitando la dirección IP pública de nuestro servidor, con /phpmyadmin agregado al final.
-ip=$(hostname -I)
-dialog --title &quot;Usuario de la cuenta y la contraseña adicional que hemos configurado&quot; \
-  --backtitle &quot;En el acceso a phpMyAdmin, nos solicitará:&quot;\
-  --msgbox &quot;En nuestro navegador pondremos todo seguido: $ip/phphmyadmin&quot; 0 50
 clear
+
+#Instalación de Apache
+sudo apt install apache2 -y
+sudo apt install ghostscript -y
+
+#Instalación de PHP
+echo &quot;Instalando PHP..&quot;
+sudo apt install libapache2-mod-php \
+  php \
+  php-bcmath \
+  php-curl \
+  php-imagick \
+  php-intl \
+  php-json \
+  php-mbstring \
+  php-mysql \
+  php-xml \
+  php-zip -y
+
+#Instalación Wordpress
+cd /tmp || exit
+wget https://wordpress.org/latest.tar.gz
+tar -xzf latest.tar.gz
+sudo mv wordpress /var/www/html/
+
+#Reinicio del servicio apache y comprobación del estado
+echo &quot;Reiniciando apache..&quot;
+sudo systemctl restart apache2.service
+sudo systemctl --no-pager status apache2.service
+sudo ufw enable
+sudo ufw allow in &quot;Apache Full&quot;
+sudo ufw allow 22
+sudo ufw allow 3306
+sudo ufw status
+
+#Cambiamos la propiedad y permisos de los archivos
+sudo chown -R www-data:www-data /var/www/html/wordpress
+sudo chmod -R 755 /var/www/html/wordpress
+
+#Configurar WordPress para conectarse a la base de datos
+cd /var/www/html/wordpress || exit
+
+#copiamos el archivo de configuración
+cp wp-config-sample.php wp-config.php
+
+#Introducimos el nombre del usuario de la BBDD
+nomuser=$(dialog --title &quot;Usuario de la BBDD&quot; \
+  --stdout \
+  --inputbox &quot;Nombre&quot; 0 0)
+#Llamo a la funcion:
+acabar
+
+#Introducimos el password
+passwd=$(dialog --title &quot;Contraseña de acceso a la BBDD&quot; \
+  --stdout \
+  --inputbox &quot;Password&quot; 0 0)
+#Llamo a la funcion:
+acabar
+
+#Introducimos la IP del sevidor mysql de la BBDD
+ipmysql=$(dialog --title &quot;Servidor mysql de la BBDD &quot; \
+  --stdout \
+  --inputbox &quot;IP&quot; 0 0)
+#Llamo a la funcion:
+acabar
+
+#Establecemos las credenciales de la BBDDE en el archivo de configuración wp-config.php:
+sudo -u www-data sed -i &quot;23s/.*/DEFINE( 'DB_NAME', 'wordpress_db' )/&quot; /var/www/html/wordpress/wp-config.php
+sudo -u www-data sed -i &quot;26s/.*/DEFINE( 'DB_USER', '$nomuser' )/&quot; /var/www/html/wordpress/wp-config.php
+sudo -u www-data sed -i &quot;29s/.*/DEFINE( 'DB_PASSWORD', '$passwd' )/&quot; /var/www/html/wordpress/wp-config.php
+sudo -u www-data sed -i &quot;32s/.*/DEFINE( 'DB_HOST', '$ipmysql' )/&quot; /var/www/html/wordpress/wp-config.php
+
+#creamos un archivo de configuración para el sitio de Wordpress en Apache
+echo &quot;&lt;VirtualHost *:80&gt;
+        ServerAdmin admin@edu.com
+        DocumentRoot /var/www/html/wordpress
+        ServerName edu.com
+        &lt;Directory /var/www/html/wordpress&gt;
+            Options Indexes FollowSymLinks
+            AllowOverride All
+            Require all granted
+        &lt;/Directory&gt;
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;&quot; | sudo tee /etc/apache2/sites-available/wordpress.conf
+
+#Habilitamos el nuevo sitio de WordPress y el módulo de reescritura de Apache:
+sudo a2ensite wordpress.conf
+sudo a2enmod rewrite
+
+#Deshabilitamos el sitio predeterminado “It Works” con:
+sudo a2dissite 000-default
+
+#Reiniciamos Apache para aplicar los cambios:
+sudo systemctl restart apache2.service
+
+#Comprobamos el estado
+sudo systemctl status apache2
+
 exit 0
 
 </code></pre>
