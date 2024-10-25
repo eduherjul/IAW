@@ -98,7 +98,7 @@ sudo systemctl restart apache2.service
 ip=$(hostname -I)
 dialog --title "Usuario de la cuenta y la contraseña adicional que hemos configurado" \
   --backtitle "En el acceso a phpMyAdmin, nos solicitará:"\
-  --msgbox "En nuestro navegador pondremos todo seguido: $ip/phphmyadmin" 0 50
+  --msgbox "En nuestro navegador pondremos todo seguido: $ip/phphmyadmin" 0 70
 clear
 exit 0
 
