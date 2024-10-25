@@ -16,17 +16,17 @@
 
 ### Crear la BBDD
 
-   <pre> 
-   <code>
-   CREATE DATABASE wordpress_db;
-   CREATE USER 'wp_user'@'%' IDENTIFIED BY 'tu_contraseña_segura';
-   GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wp_user'@'%';
-   FLUSH PRIVILEGES;
-   EXIT;
-   </pre> 
-   </code> 
-   
-   ![alt text](image.png)
+`CREATE DATABASE wordpress_db;`
+
+`CREATE USER 'wp_user'@'%' IDENTIFIED BY 'tu_contraseña_segura';`
+
+`GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wp_user'@'%';`
+
+`FLUSH PRIVILEGES;`
+
+`EXIT;`
+
+![alt text](image.png)
 
 ### Permitiremos las conexiones remotas
 
@@ -59,26 +59,15 @@ De esta forma, con un script descargamos mysql y el servidor queda listo para so
 
 `sudo apt install apache2 -y`
 
-##### **Instalamos PHP y las extensiones necesarias.**
+#### Instalamos PHP y las extensiones necesarias.
 
-   <pre>
-   <code>
-   sudo apt update
-   sudo apt install apache2 \
-                 ghostscript \
-                 libapache2-mod-php \
-                 php \
-                 php-bcmath \
-                 php-curl \
-                 php-imagick \
-                 php-intl \
-                 php-json \
-                 php-mbstring \
-                 php-mysql \
-                 php-xml \
-                 php-zip
-   </pre>
-   </code>
+`sudo apt update`
+
+`sudo apt install apache2 ghostscript libapache2-mod-php`
+
+`sudo apt install php php-bcmath php-curl php-imagick php-intl`
+
+`sudo apt install php-json php-mbstring php-mysql php-xml php-zip`
 
 ### Reiniciamos apache para que los cambios surtan efecto.
 
@@ -87,13 +76,17 @@ De esta forma, con un script descargamos mysql y el servidor queda listo para so
 ### Descargamos la última versión de WordPress y colocamos en la carpeta web de Apache.
 
 `cd /tmp`
+
 `wget https://wordpress.org/latest.tar.gz`
+
 `tar -xzf latest.tar.gz`
+
 `sudo mv wordpress /var/www/html/`
 
 ### Cambiamos la propiedad y permisos de los archivos.
 
 `sudo chown -R www-data:www-data /var/www/html/wordpress`
+
 `sudo chmod -R 755 /var/www/html/wordpress`
 
 ### Configurar WordPress para conectarse a la base de datos.
@@ -108,16 +101,15 @@ De esta forma, con un script descargamos mysql y el servidor queda listo para so
 
 `sudo nano wp-config.php`
 
-**Cambia las siguientes líneas para apuntar al "Servidor 2" (MySQL) en lugar de usar "localhost".**
+### Cambiamos las siguientes líneas para apuntar al "Servidor 2" (MySQL) en lugar de usar "localhost".
 
-<pre>
-<code>
-define('DB_NAME', 'wordpress_db');     // Nombre de la base de datos
-define('DB_USER', 'wp_user');          // Usuario de la base de datos
-define('DB_PASSWORD', 'tu_contraseña_segura'); // Contraseña del usuario
-define('DB_HOST', 'IP_DEL_SERVIDOR_2'); // La IP del Servidor 2 (donde está MySQL)
-</pre>
-</code>
+`define('DB_NAME', 'wordpress_db');     // Nombre de la base de datos`
+
+`define('DB_USER', 'wp_user');          // Usuario de la base de datos`
+
+`define('DB_PASSWORD', 'tu_contraseña_segura'); // Contraseña del usuario`
+
+`define('DB_HOST', 'IP_DEL_SERVIDOR_2'); // La IP del Servidor 2 (donde está MySQL)`
 
 ![alt text](image-3.png)
 
