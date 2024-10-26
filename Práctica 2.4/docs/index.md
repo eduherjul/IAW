@@ -2,5 +2,5 @@
 
 ## Descripción
 
-* DOCUMENTO-INFORMATIVO
+* DOCUMENTO-DETALLADO
 * Consultar en la pestaña
