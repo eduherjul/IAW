@@ -50,7 +50,7 @@ De esta forma, con un script descargamos mysql y el servidor queda listo para so
 
 **Puedes ver el script** [aquí](Mysql-para-wordpress.md)
 
-[Descargar el archivo](./descargas/Mysql-para-wordpress.sh)
+[Descargar el archivo](./scripts/Mysql-para-wordpress.sh)
 
 
 ## PASO 2: Instalar Apache, PHP, las extensiones necesarias y descargar e instalar Wordpress
