@@ -1,18 +1,4 @@
-# Inicio: "Documentación de Unidades Didácticas de AIW"
-
-## Práctica 1.3: Creación de una página estática en mkdocs
-
-## Práctica 2.1: Implantación de una web estática con Apache en markdown
-
-## Práctica 2.2: Creación y configuración de un certificado SSL/TLS autofirmado en Apache
-
-## Práctica 2.3: Instalar, configurar y securizar phpMyAdmin
-
-## Práctica 4 Instalar y configurar Wordpress
-
-nav:
-
-## Description
+# Descripción
 
 - Práctica 1.3:
   - Paso1

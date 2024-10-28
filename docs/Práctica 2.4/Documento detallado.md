@@ -1,4 +1,4 @@
-# Práctica 4 Instalar y configurar Wordpress
+# Práctica 2.4 Instalar y configurar Wordpress
 
 ## PASO 1: Configurar el Servidor 2 (Mysql)
 
@@ -166,5 +166,5 @@ De esta forma con un script:
 
 ** Puedes ver el script [aquí](Apache-wordpress-php.md)
 
-[Descargar el archivo](./descargas/Apache-wordpress-php.sh)
+[Descargar el archivo](./scripts/Apache-wordpress-php.sh)
 

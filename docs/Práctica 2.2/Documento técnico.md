@@ -13,7 +13,7 @@ Este script realiza todas las acciones necesarias, como la actualización del si
 
 ** Puedes ver el script [aquí](Instalacion-LAMP.md)
 
-<a href="Scripts/Instalacion-LAMP.sh" download>**DESCARGAR**</a>
+[Descargar el archivo](./Scripts/Instalacion-LAMP.sh)
 
 Lo comprobamos con las versiones:
 
@@ -32,7 +32,8 @@ Automatizar el proceso de creación ahorra tiempo y esfuerzo. Al ejecutar un scr
 
 ** Puedes ver el script [aquí](setup-certificado-firmado.md)
 
-<a href="Scripts/setup-certificado-firmado.sh" download>**DESCARGAR**</a>
+[Descargar el archivo](./Scripts/setup-certificado-firmado.sh)
+
 
 Lo comprobamos:
 - Consultando la información del sujeto del cetificado y la fecha de caducidad
@@ -59,7 +60,9 @@ El script nos habilitará el módulo rewrite en apache y reinicirá el servicio.
 
 ** Puedes ver el script [aquí](ssl-conf_.conf.md)
 
-<a href="Scripts/ssl-conf_.conf.sh" download>**DESCARGAR**</a>
+
+[Descargar el archivo](./Scripts/ssl-conf_.conf.sh)
+
 
 Comprobamos los sitios creados en `/etc/apache/sites-available `
 

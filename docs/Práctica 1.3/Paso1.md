@@ -1,3 +1,15 @@
+---
+title: Práctica 1.3 - Instalar Mkdocs
+marp: true
+paginate: true
+---
+<div style="text-align: center;">
+     <h1>Práctica 1.3</h1>
+</div>
+
+---
+
+
 # Requisitos Previos
 
 Antes de empezar, me he asegurado de tener Python en el sistema. lo he verificado ejecutando:

@@ -4,7 +4,7 @@ marp: true
 paginate: true
 ---
 <div style="text-align: center;">
-     <h1>Práctica 1</h1>
+     <h1>Práctica 2.1</h1>
 </div>
 
 ---

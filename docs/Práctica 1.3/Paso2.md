@@ -1,3 +1,16 @@
+---
+title: Práctica 1.3 - Construir el sitio estático y desplegar en Git Pages
+marp: true
+paginate: true
+---
+<div style="text-align: center;">
+     <h1>Práctica 1.3</h1>
+</div>
+
+---
+
+
+
 # Construir el Sitio Estático
 
 Ejecutamos el siguiente comando para construir todos los archivos necesarios para tu sitio web estático, que se guardarán en la carpeta site:

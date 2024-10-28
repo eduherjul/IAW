@@ -13,7 +13,9 @@ Este script realiza todas las acciones necesarias, como la actualización del si
 
 ** Puedes ver el script [aquí](Instalacion-LAMP.md)
 
-<a href="scripts/Instalacion-LAMP.sh" download>**DESCARGAR**</a>
+
+[Descargar el archivo](./scripts/Instalacion-LAMP.sh)
+
 
 Lo comprobamos con las versiones:
 
@@ -93,7 +95,9 @@ Automatizar la instalación y configuración de PhpMyAdmin mediante un script pr
 
 ** Puedes ver el script [aquí](phpmyadmin-script.md)
 
-<a href="scripts/phpmyadmin-script.sh" download>**DESCARGAR**</a>
+
+[Descargar el archivo](./scripts/phpmyadmin-script.sh)
+
 
 Vemos el primer control de acceso para phpMyAdmin
 
