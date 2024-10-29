@@ -11,6 +11,8 @@
       
       
       
+        <link rel="prev" href="../../Pr%C3%A1ctica%202.4/Documento-detallado/">
+      
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -355,17 +357,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Práctica 2.5/Documento-apache.md" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -1070,6 +1076,8 @@
       
   
   
+    
+  
   
     
     
@@ -1083,12 +1091,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
@@ -1102,7 +1110,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Práctica2.5
@@ -1113,6 +1121,8 @@
                 
   
   
+    
+  
   
     
     
@@ -1126,12 +1136,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="">
@@ -1145,7 +1155,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7_1">
             <span class="md-nav__icon md-icon"></span>
             Detalle documento
@@ -1156,17 +1166,228 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Práctica 2.5/Documento-apache.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Práctica 2.5 - Balanceo de Carga con Apache
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    None
+    Práctica 2.5 - Balanceo de Carga con Apache
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actualizar-paquetes-del-sistema" class="md-nav__link">
+    Actualizar Paquetes del Sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalaremos-el-servidor-web-apache-en-los-tres-servidores" class="md-nav__link">
+    Instalaremos el Servidor Web Apache en los tres servidores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuramos-el-primer-servidor-backend-apache" class="md-nav__link">
+    Configuramos el Primer Servidor Backend Apache
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuramos el Primer Servidor Backend Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuramos-el-firewall" class="md-nav__link">
+    Configuramos el Firewall
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuramos el Firewall">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#establecemos-los-puertos-22-y-80-para-comunicarnos-por-terminal-con-el-servidor-y-para-poder-acceder-al-servidor-apache" class="md-nav__link">
+    Establecemos los puertos 22 y 80 para comunicarnos por terminal con el servidor y para poder acceder al servidor apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminamos-la-pagina-por-defecto-documentroot-indexhtml-para-evitar-que-no-interfiera-en-cada-servidor-backend-web1-y-web2" class="md-nav__link">
+    Eliminamos la página por defecto (DocumentRoot) index.html para evitar que no interfiera en cada servidor backend web1 y web2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creamos-una-pagina-html-de-muestra-y-un-archivo-de-configuracion-de-host-virtual-en-el-primer-servidor-apache" class="md-nav__link">
+    Creamos una página HTML de muestra y un archivo de configuración de host virtual en el primer servidor Apache:**
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deshabilitamos-el-sitio-por-defecto-de-apache-para-evitar-conflictos" class="md-nav__link">
+    Deshabilitamos el sitio por defecto de Apache para evitar conflictos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creamos-el-archivo-de-configuracion-del-host-virtual" class="md-nav__link">
+    Creamos el archivo de configuración del host virtual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-en-etchosts" class="md-nav__link">
+    Configuración en /etc/hosts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuramos-el-segundo-servidor-backend-apache" class="md-nav__link">
+    Configuramos el Segundo Servidor Backend Apache
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuramos el Segundo Servidor Backend Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-partir-de-la-configuracion-del-firewall-realizaremos-los-mismos-pasos-hasta-aqui-que-es-donde-cambiaremos-la-configuracion-para-el-segundo-servidor" class="md-nav__link">
+    A partir de la configuración del Firewall realizaremos los mismos pasos hasta aquí, que es donde cambiaremos la configuración para el segundo servidor
+  </a>
+  
+    <nav class="md-nav" aria-label="A partir de la configuración del Firewall realizaremos los mismos pasos hasta aquí, que es donde cambiaremos la configuración para el segundo servidor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creamos-una-pagina-html-de-muestra-en-el-segundo-servidor" class="md-nav__link">
+    Creamos una página HTML de muestra en el segundo servidor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creamos-el-balanceador-de-carga-de-apache" class="md-nav__link">
+    Creamos el Balanceador de Carga de Apache
+  </a>
+  
+    <nav class="md-nav" aria-label="Creamos el Balanceador de Carga de Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#una-vez-actualizado-el-sistema-y-configurado-el-firewall-seguiremos-con-los-siguientes-pasos" class="md-nav__link">
+    Una vez actualizado el sistema y configurado el Firewall seguiremos con los siguientes pasos
+  </a>
+  
+    <nav class="md-nav" aria-label="Una vez actualizado el sistema y configurado el Firewall seguiremos con los siguientes pasos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#habilitamos-los-modulos-proxy-en-el-servidor-de-balanceo-de-carga" class="md-nav__link">
+    Habilitamos los módulos proxy en el servidor de balanceo de carga
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creamos-un-archivo-de-configuracion-de-apache-para-el-balanceo-de-carga" class="md-nav__link">
+    Creamos un archivo de configuración de Apache para el balanceo de carga
+  </a>
+  
+    <nav class="md-nav" aria-label="Creamos un archivo de configuración de Apache para el balanceo de carga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deshabilitamos-el-sitio-por-defecto-de-apache-para-evitar-conflictos_1" class="md-nav__link">
+    Deshabilitamos el sitio por defecto de Apache para evitar conflictos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuraremos-la-politica-de-balanceo-de-carga" class="md-nav__link">
+    Configuraremos la Política de Balanceo de Carga
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
