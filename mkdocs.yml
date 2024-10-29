@@ -20,7 +20,7 @@ nav:
           - Práctica 2.4/Documento detallado.md
   - Práctica2.5:
       - Detalle documento:
-          - Práctica 2.5/Documento detallado.md
+          - Práctica 2.5/Documento apache.md
 docs_dir: docs
 site_dir: site
 theme:
