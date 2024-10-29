@@ -11,7 +11,7 @@ paginate: true
 
 ---
 
-# Práctica 2.5 - Balanceo de Carga con Apache
+<h1>Práctica 2.5 - Balanceo de Carga con Apache</h1>
 
 ## Actualizar Paquetes del Sistema
 
@@ -22,7 +22,7 @@ paginate: true
 
 Reiniciaremos todos los servidores para aplicar los cambios.
 
-**Instalaremos el Servidor Web Apache en los tres servidores**
+## Instalaremos el Servidor Web Apache en los tres servidores
 
 `sudo apt install apache2 -y`
 
@@ -34,10 +34,9 @@ Verificamos el estado del servicio Apache:
 
 ## Configuramos el Primer Servidor Backend Apache
 
+### Configuramos el Firewall
 
-#### Configuramos el Firewall
-
-**Establecemos los puertos 22 y 80 para comunicarnos por terminal con el servidor y para poder acceder al servidor apache**
+#### Establecemos los puertos 22 y 80 para comunicarnos por terminal con el servidor y para poder acceder al servidor apache
 
 `sudo ufw enable`
 `sudo ufw allow 22`
@@ -137,7 +136,7 @@ En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregar
 
 ![alt text](image-6.png)
 
-#### Deshabilitamos el sitio por defecto de Apache para evitar conflictos
+**Deshabilitamos el sitio por defecto de Apache para evitar conflictos**
 
 `cd /etc/apache2/sites-available`
 `sudo a2dissite 000-default.conf`
@@ -145,7 +144,7 @@ En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregar
 
 **Guardamos y cerramos el archivo.**
 
-#### Creamos el archivo de configuración del host virtual
+**Creamos el archivo de configuración del host virtual**
 
 `nano /etc/apache2/sites-available/web2.conf`
 
@@ -170,7 +169,7 @@ Habilitamos:
 `sudo a2ensite web2.conf`
 `sudo systemctl reload apache2`
 
-#### Configuración en /etc/hosts
+**Configuración en /etc/hosts**
 
 En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregaremos las IP y los nombres de todos los servidores (`web1, web2 y loadbalancer`) en el archivo **/etc/hosts**:
 
@@ -208,13 +207,13 @@ Verifica todos los módulos proxy:
 
 #### Creamos un archivo de configuración de Apache para el balanceo de carga
 
-**Deshabilitamos el sitio por defecto de Apache para evitar conflictos**
+##### Deshabilitamos el sitio por defecto de Apache para evitar conflictos
 
 `cd /etc/apache2/sites-available`
 `sudo a2dissite 000-default.conf`
 `sudo systemctl reload apache2.service`
 
-#### Creamos un archivo de configuración de Apache para el balanceo de carga:
+**Creamos un archivo de configuración de Apache para el balanceo de carga**
 
 `sudo nano /etc/apache2/sites-available/loadbalancer.conf`
 
@@ -266,7 +265,7 @@ Recordemos que después de habilitar los módulos es necesario reiniciar el serv
 
 `systemctl restart apache2`
 
-#### Configuración en /etc/hosts
+**Configuración en /etc/hosts**
 
 En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregaremos las IP y los nombres de todos los servidores (`web1, web2 y loadbalancer`) en el archivo **/etc/hosts**:
 
