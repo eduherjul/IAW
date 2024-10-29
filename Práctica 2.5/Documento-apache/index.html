@@ -1255,7 +1255,7 @@
         
           <li class="md-nav__item">
   <a href="#creamos-una-pagina-html-de-muestra-y-un-archivo-de-configuracion-de-host-virtual-en-el-primer-servidor-apache" class="md-nav__link">
-    Creamos una página HTML de muestra y un archivo de configuración de host virtual en el primer servidor Apache:**
+    Creamos una página HTML de muestra y un archivo de configuración de host virtual en el primer servidor Apache
   </a>
   
 </li>
@@ -1314,6 +1314,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configuracion-en-etchosts_1" class="md-nav__link">
+    Configuración en /etc/hosts
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1367,6 +1374,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#configuraremos-la-politica-de-balanceo-de-carga" class="md-nav__link">
     Configuraremos la Política de Balanceo de Carga
@@ -1374,8 +1386,17 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#configuracion-en-etchosts_2" class="md-nav__link">
+    Configuración en /etc/hosts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pondremos-la-ip-del-servidor-balanceador-para-verificar-el-balanceo-de-carga-con-apache" class="md-nav__link">
+    Pondremos la IP del servidor balanceador para verificar el Balanceo de carga con Apache
+  </a>
   
 </li>
         
@@ -1478,7 +1499,7 @@
         
           <li class="md-nav__item">
   <a href="#creamos-una-pagina-html-de-muestra-y-un-archivo-de-configuracion-de-host-virtual-en-el-primer-servidor-apache" class="md-nav__link">
-    Creamos una página HTML de muestra y un archivo de configuración de host virtual en el primer servidor Apache:**
+    Creamos una página HTML de muestra y un archivo de configuración de host virtual en el primer servidor Apache
   </a>
   
 </li>
@@ -1537,6 +1558,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configuracion-en-etchosts_1" class="md-nav__link">
+    Configuración en /etc/hosts
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1590,6 +1618,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#configuraremos-la-politica-de-balanceo-de-carga" class="md-nav__link">
     Configuraremos la Política de Balanceo de Carga
@@ -1597,8 +1630,17 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#configuracion-en-etchosts_2" class="md-nav__link">
+    Configuración en /etc/hosts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pondremos-la-ip-del-servidor-balanceador-para-verificar-el-balanceo-de-carga-con-apache" class="md-nav__link">
+    Pondremos la IP del servidor balanceador para verificar el Balanceo de carga con Apache
+  </a>
   
 </li>
         
@@ -1631,8 +1673,8 @@
 
 <h2 id="actualizar-paquetes-del-sistema">Actualizar Paquetes del Sistema</h2>
 <p><strong>Primero, actualizaremos y mejoraremos todos los paquetes del sistema a la última versión en todos los servidores:</strong></p>
-<p><code>apt update -y</code>
-<code>apt upgrade -y</code></p>
+<p><code>apt update -y</code></p>
+<p><code>apt upgrade -y</code></p>
 <p>Reiniciaremos todos los servidores para aplicar los cambios.</p>
 <h2 id="instalaremos-el-servidor-web-apache-en-los-tres-servidores">Instalaremos el Servidor Web Apache en los tres servidores</h2>
 <p><code>sudo apt install apache2 -y</code></p>
@@ -1642,14 +1684,14 @@
 <h2 id="configuramos-el-primer-servidor-backend-apache">Configuramos el Primer Servidor Backend Apache</h2>
 <h3 id="configuramos-el-firewall">Configuramos el Firewall</h3>
 <h4 id="establecemos-los-puertos-22-y-80-para-comunicarnos-por-terminal-con-el-servidor-y-para-poder-acceder-al-servidor-apache">Establecemos los puertos 22 y 80 para comunicarnos por terminal con el servidor y para poder acceder al servidor apache</h4>
-<p><code>sudo ufw enable</code>
-<code>sudo ufw allow 22</code>
-<code>sudo ufw allow 80</code></p>
+<p><code>sudo ufw enable</code></p>
+<p><code>sudo ufw allow 22</code></p>
+<p><code>sudo ufw allow 80</code></p>
 <p><img alt="alt text" src="../image-1.png" /></p>
 <h4 id="eliminamos-la-pagina-por-defecto-documentroot-indexhtml-para-evitar-que-no-interfiera-en-cada-servidor-backend-web1-y-web2">Eliminamos la página por defecto (DocumentRoot) <code>index.html</code> para evitar que no interfiera en cada servidor backend <code>web1</code> y <code>web2</code></h4>
-<p><code>cd /var/www/html</code>
-<code>sudo rm -rf index.html</code></p>
-<h4 id="creamos-una-pagina-html-de-muestra-y-un-archivo-de-configuracion-de-host-virtual-en-el-primer-servidor-apache">Creamos una página HTML de muestra y un archivo de configuración de host virtual en el primer servidor Apache:**</h4>
+<p><code>cd /var/www/html</code></p>
+<p><code>sudo rm -rf index.html</code></p>
+<h4 id="creamos-una-pagina-html-de-muestra-y-un-archivo-de-configuracion-de-host-virtual-en-el-primer-servidor-apache">Creamos una página HTML de muestra y un archivo de configuración de host virtual en el primer servidor Apache</h4>
 <p><code>sudo nano /var/www/html/web1.html</code></p>
 <p><strong>Agregamos el siguiente código HTML:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -1662,9 +1704,9 @@
 <p><img alt="alt text" src="../image-2.png" /></p>
 <p><strong>Guardamos y cerramos el archivo.</strong></p>
 <h4 id="deshabilitamos-el-sitio-por-defecto-de-apache-para-evitar-conflictos">Deshabilitamos el sitio por defecto de Apache para evitar conflictos</h4>
-<p><code>cd /etc/apache2/sites-available</code>
-<code>sudo a2dissite 000-default.conf</code>
-<code>sudo systemctl reload apache2.service</code></p>
+<p><code>cd /etc/apache2/sites-available</code></p>
+<p><code>sudo a2dissite 000-default.conf</code></p>
+<p><code>sudo systemctl reload apache2.service</code></p>
 <h4 id="creamos-el-archivo-de-configuracion-del-host-virtual">Creamos el archivo de configuración del host virtual</h4>
 <p><code>nano /etc/apache2/sites-available/web1.conf</code></p>
 <p>Agregamos las siguientes configuraciones:</p>
@@ -1680,16 +1722,16 @@
 <p><img alt="alt text" src="../image-3.png" /></p>
 <p><strong>Guardamos y cerramos el archivo, luego habilitamos y recargamos el servicio Apache:</strong>
 Habilitamos:</p>
-<p><code>sudo a2ensite web1.conf</code>
-<code>sudo systemctl reload apache2</code></p>
+<p><code>sudo a2ensite web1.conf</code></p>
+<p><code>sudo systemctl reload apache2</code></p>
 <h4 id="configuracion-en-etchosts">Configuración en /etc/hosts</h4>
 <p>En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregaremos las IP y los nombres de todos los servidores (<code>web1, web2 y loadbalancer</code>) en el archivo <strong>/etc/hosts</strong>:</p>
-<p><code># IP del servidor web1</code>
-<code>&lt;IP_web1&gt; web1.iaw2425.com</code></p>
-<p><code>IP del servidor web2</code>
-<code>&lt;IP_web2&gt; web2.iaw2425.com</code></p>
-<p><code>IP del balanceador de carga</code>
-<code>&lt;IP_loadbalancer&gt; loadbalancer.iaw2425.com</code></p>
+<p><code># IP del servidor web1</code></p>
+<p><code>&lt;IP_web1&gt; web1.iaw2425.com</code></p>
+<p><code>IP del servidor web2</code></p>
+<p><code>&lt;IP_web2&gt; web2.iaw2425.com</code></p>
+<p><code>IP del balanceador de carga</code></p>
+<p><code>&lt;IP_loadbalancer&gt; loadbalancer.iaw2425.com</code></p>
 <p><img alt="alt text" src="../image-5.png" /></p>
 <h2 id="configuramos-el-segundo-servidor-backend-apache">Configuramos el Segundo Servidor Backend Apache</h2>
 <h3 id="a-partir-de-la-configuracion-del-firewall-realizaremos-los-mismos-pasos-hasta-aqui-que-es-donde-cambiaremos-la-configuracion-para-el-segundo-servidor">A partir de la configuración del Firewall realizaremos los mismos pasos hasta aquí, que es donde cambiaremos la configuración para el segundo servidor</h3>
@@ -1705,9 +1747,9 @@ Habilitamos:</p>
 </code></pre></div>
 <p><img alt="alt text" src="../image-6.png" /></p>
 <p><strong>Deshabilitamos el sitio por defecto de Apache para evitar conflictos</strong></p>
-<p><code>cd /etc/apache2/sites-available</code>
-<code>sudo a2dissite 000-default.conf</code>
-<code>sudo systemctl reload apache2.service</code></p>
+<p><code>cd /etc/apache2/sites-available</code></p>
+<p><code>sudo a2dissite 000-default.conf</code></p>
+<p><code>sudo systemctl reload apache2.service</code></p>
 <p><strong>Guardamos y cerramos el archivo.</strong></p>
 <p><strong>Creamos el archivo de configuración del host virtual</strong></p>
 <p><code>nano /etc/apache2/sites-available/web2.conf</code></p>
@@ -1724,16 +1766,16 @@ Habilitamos:</p>
 <p><img alt="alt text" src="../image-7.png" /></p>
 <p><strong>Guardamos y cerramos el archivo, luego habilitamos y recargamos el servicio Apache:</strong>
 Habilitamos:</p>
-<p><code>sudo a2ensite web2.conf</code>
-<code>sudo systemctl reload apache2</code></p>
-<p><strong>Configuración en /etc/hosts</strong></p>
+<p><code>sudo a2ensite web2.conf</code></p>
+<p><code>sudo systemctl reload apache2</code></p>
+<h4 id="configuracion-en-etchosts_1">Configuración en /etc/hosts</h4>
 <p>En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregaremos las IP y los nombres de todos los servidores (<code>web1, web2 y loadbalancer</code>) en el archivo <strong>/etc/hosts</strong>:</p>
-<p><code># IP del servidor web1</code>
-<code>&lt;IP_web1&gt; web1.iaw2425.com</code></p>
-<p><code>IP del servidor web2</code>
-<code>&lt;IP_web2&gt; web2.iaw2425.com</code></p>
-<p><code>IP del balanceador de carga</code>
-<code>&lt;IP_loadbalancer&gt; loadbalancer.iaw2425.com</code></p>
+<p><code># IP del servidor web1</code></p>
+<p><code>&lt;IP_web1&gt; web1.iaw2425.com</code></p>
+<p><code>IP del servidor web2</code></p>
+<p><code>&lt;IP_web2&gt; web2.iaw2425.com</code></p>
+<p><code>IP del balanceador de carga</code></p>
+<p><code>&lt;IP_loadbalancer&gt; loadbalancer.iaw2425.com</code></p>
 <p><img alt="alt text" src="../image-8.png" /></p>
 <h2 id="creamos-el-balanceador-de-carga-de-apache">Creamos el Balanceador de Carga de Apache</h2>
 <h3 id="una-vez-actualizado-el-sistema-y-configurado-el-firewall-seguiremos-con-los-siguientes-pasos">Una vez actualizado el sistema y configurado el Firewall seguiremos con los siguientes pasos</h3>
@@ -1754,7 +1796,7 @@ a2enmod<span class="w"> </span>lbmethod_byrequests
 <code>sudo systemctl reload apache2.service</code></p>
 <p><strong>Creamos un archivo de configuración de Apache para el balanceo de carga</strong></p>
 <p><code>sudo nano /etc/apache2/sites-available/loadbalancer.conf</code></p>
-<p>aAgregamos las siguientes configuraciones:</p>
+<p>Agregamos las siguientes configuraciones:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
 <span class="w">    </span><span class="nb">ServerName</span><span class="w"> </span>balancer.iaw2425.com
 <span class="w">    </span><span class="nt">&lt;Proxy</span><span class="w"> </span><span class="s">balancer://webserver</span><span class="nt">&gt;</span>
@@ -1776,9 +1818,9 @@ a2enmod<span class="w"> </span>lbmethod_byrequests
 <p><img alt="alt text" src="../image-9.png" /></p>
 <p><strong>Guardamos y cerramos el archivo, luego habilitamos y recargamos el servicio Apache:</strong>
 Habilitamos:</p>
-<p><code>sudo a2ensite loadbalancer.conf</code>
-<code>sudo systemctl reload apache2</code></p>
-<h4 id="configuraremos-la-politica-de-balanceo-de-carga">Configuraremos la Política de Balanceo de Carga</h4>
+<p><code>sudo a2ensite loadbalancer.conf</code></p>
+<p><code>sudo systemctl reload apache2</code></p>
+<h3 id="configuraremos-la-politica-de-balanceo-de-carga">Configuraremos la Política de Balanceo de Carga</h3>
 <p><strong>Para configurar la política de balanceo de carga es necesario tener activado previamente el módulo proxy_balancer con el siguiente comando:</strong></p>
 <p><code>sudo a2enmod proxy_balancer</code></p>
 <p>El balanceo de carga que vamos a utilizar en esta práctica será un balanceo de tipo Round Robin. Este método de balanceo de carga consiste en distribuir las peticiones entre los servidores de forma secuencial, de forma que cada vez que llegue una nueva petición se envía al siguiente servidor de la lista de servidores configurados en el servidor Apache.</p>
@@ -1787,16 +1829,16 @@ Habilitamos:</p>
 <p>Este método de balanceo también permite distribuir las peticiones entre los servidores en función de los parámetros <code>lbfactor y lbstatus</code>.</p>
 <p>Recordemos que después de habilitar los módulos es necesario reiniciar el servicio de Apache:</p>
 <p><code>systemctl restart apache2</code></p>
-<p><strong>Configuración en /etc/hosts</strong></p>
+<h3 id="configuracion-en-etchosts_2">Configuración en /etc/hosts</h3>
 <p>En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregaremos las IP y los nombres de todos los servidores (<code>web1, web2 y loadbalancer</code>) en el archivo <strong>/etc/hosts</strong>:</p>
-<p><code># IP del servidor web1</code>
-<code>&lt;IP_web1&gt; web1.iaw2425.com</code></p>
-<p><code>IP del servidor web2</code>
-<code>&lt;IP_web2&gt; web2.iaw2425.com</code></p>
-<p><code>IP del balanceador de carga</code>
-<code>&lt;IP_loadbalancer&gt; loadbalancer.iaw2425.com</code></p>
+<p><code># IP del servidor web1</code></p>
+<p><code>&lt;IP_web1&gt; web1.iaw2425.com</code></p>
+<p><code>IP del servidor web2</code></p>
+<p><code>&lt;IP_web2&gt; web2.iaw2425.com</code></p>
+<p><code>IP del balanceador de carga</code></p>
+<p><code>&lt;IP_loadbalancer&gt; loadbalancer.iaw2425.com</code></p>
 <p><img alt="alt text" src="../image-10.png" /></p>
-<p><strong>Pondremos la IP del servidor balanceador para verificar el Balanceo de carga con Apache</strong></p>
+<h3 id="pondremos-la-ip-del-servidor-balanceador-para-verificar-el-balanceo-de-carga-con-apache">Pondremos la IP del servidor balanceador para verificar el Balanceo de carga con Apache</h3>
 
 
 
