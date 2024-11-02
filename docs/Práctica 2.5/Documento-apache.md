@@ -172,10 +172,10 @@ Habilitamos:
 #### Habilitamos los módulos proxy en el servidor de balanceo de carga
 
 ```bash
-a2enmod proxy
-a2enmod proxy_http
-a2enmod proxy_balancer
-a2enmod lbmethod_byrequests
+sudo a2enmod proxy
+sudo a2enmod proxy_http
+sudo a2enmod proxy_balancer
+sudo a2enmod lbmethod_byrequests
 ```
 
 Reiniciamos el servicio Apache:
