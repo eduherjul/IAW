@@ -247,7 +247,7 @@ Este método de balanceo también permite distribuir las peticiones entre los se
 
 Recordemos que después de habilitar los módulos es necesario reiniciar el servicio de Apache:
 
-`systemctl restart apache2`
+`sudo systemctl restart apache2.service`
 
 ### Configuración en /etc/hosts
 
