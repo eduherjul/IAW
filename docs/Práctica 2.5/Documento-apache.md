@@ -109,7 +109,7 @@ Habilitamos:
 
 ## Configuramos el Segundo Servidor Backend Apache
 
-### A partir de la configuración del Firewall realizaremos los dos mismos pasos previos hasta aquí, que es donde cambiaremos la configuración para el segundo servidor
+### A partir de la configuración del Firewall realizaremos los dos mismos pasos previos hechos anteriormente hasta aquí, que es donde cambiaremos la configuración para el segundo servidor
 
 #### Creamos una página HTML de muestra en el segundo servidor
 
@@ -263,7 +263,7 @@ En el balanceador, agregaremos las IP y los nombres de todos los servidores back
 
 ### Pondremos en el navegador la IP del servidor balanceador para verificar el Balanceo de carga con Apache
 
-Teniendo en cuenta también que tendremos que configurar antes en el fichero /etc/hosts del equipo donde tenemos el navegador la IP del balanceador y nombre de dominio para **asegurar que las solicitudes al dominio del balanceador se dirijan correctamente a la IP del balanceador**, en lugar de pasar por el DNS público o por algún otro servicio de resolución de nombres.
+Teniendo en cuenta también que tendremos que configurar antes en el fichero **/etc/hosts** del equipo donde tenemos el navegador la `IP del balanceador y nombre de dominio` para **asegurar que las solicitudes al dominio del balanceador se dirijan correctamente a la IP del balanceador**, en lugar de pasar por el DNS público o por algún otro servicio de resolución de nombres.
 
 ![alt text](image-8.png)
 ![alt text](image-10.png)
