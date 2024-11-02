@@ -191,7 +191,9 @@ Verifica todos los módulos proxy:
 ##### Deshabilitamos el sitio por defecto de Apache para evitar conflictos
 
 `cd /etc/apache2/sites-available`
+
 `sudo a2dissite 000-default.conf`
+
 `sudo systemctl reload apache2.service`
 
 **Creamos un archivo de configuración de Apache para el balanceo de carga**
