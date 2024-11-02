@@ -106,27 +106,10 @@ Habilitamos:
 
 `sudo systemctl reload apache2`
 
-#### Configuración en /etc/hosts
-
-En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregaremos las IP y los nombres de todos los servidores (`web1, web2 y loadbalancer`) en el archivo **/etc/hosts**:
-
-`# IP del servidor web1`
-
-`<IP_web1> web1.iaw2425.com`
-
-`IP del servidor web2`
-
-`<IP_web2> web2.iaw2425.com`
-
-`IP del balanceador de carga`
-
-`<IP_loadbalancer> loadbalancer.iaw2425.com`
-
-![alt text](image-5.png)
 
 ## Configuramos el Segundo Servidor Backend Apache
 
-### A partir de la configuración del Firewall realizaremos los mismos pasos hasta aquí, que es donde cambiaremos la configuración para el segundo servidor
+### A partir de la configuración del Firewall realizaremos los dos mismos pasos previos hasta aquí, que es donde cambiaremos la configuración para el segundo servidor
 
 #### Creamos una página HTML de muestra en el segundo servidor
 
@@ -181,24 +164,6 @@ Habilitamos:
 `sudo a2ensite web2.conf`
 
 `sudo systemctl reload apache2`
-
-#### Configuración en /etc/hosts
-
-En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregaremos las IP y los nombres de todos los servidores (`web1, web2 y loadbalancer`) en el archivo **/etc/hosts**:
-
-`# IP del servidor web1`
-
-`<IP_web1> web1.iaw2425.com`
-
-`IP del servidor web2`
-
-`<IP_web2> web2.iaw2425.com`
-
-`IP del balanceador de carga`
-
-`<IP_loadbalancer> loadbalancer.iaw2425.com`
-
-![alt text](image-8.png)
 
 ## Creamos el Balanceador de Carga de Apache
 
@@ -284,7 +249,7 @@ Recordemos que después de habilitar los módulos es necesario reiniciar el serv
 
 ### Configuración en /etc/hosts
 
-En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregaremos las IP y los nombres de todos los servidores (`web1, web2 y loadbalancer`) en el archivo **/etc/hosts**:
+En el balanceador, agregaremos las IP y los nombres de todos los servidores backend (`web1, web2`) en el archivo **/etc/hosts**:
 
 `# IP del servidor web1`
 
@@ -294,10 +259,14 @@ En cada uno de los servidores backend (web1 y web2) y en el balanceador, agregar
 
 `<IP_web2> web2.iaw2425.com`
 
-`IP del balanceador de carga`
+![alt text](image-5.png)
 
-`<IP_loadbalancer> loadbalancer.iaw2425.com`
+### Pondremos en el navegador la IP del servidor balanceador para verificar el Balanceo de carga con Apache
 
+Teniendo en cuenta también que tendremos que configurar antes en el fichero /etc/hosts del equipo donde tenemos el navegador la IP del balanceador y nombre de dominio para **asegurar que las solicitudes al dominio del balanceador se dirijan correctamente a la IP del balanceador**, en lugar de pasar por el DNS público o por algún otro servicio de resolución de nombres.
+
+![alt text](image-8.png)
 ![alt text](image-10.png)
+![alt text](image-11.png)
 
-### Pondremos la IP del servidor balanceador para verificar el Balanceo de carga con Apache
+#### Tenemos que tener en cuenta el configurar la IP y el nombre del dominio en el balanceador en el fichero /etc/hosts , pero sino trabajamos con nombres de dominio solo con IP nos valdrá
