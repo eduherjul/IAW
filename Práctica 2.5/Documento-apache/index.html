@@ -1771,9 +1771,9 @@ a2enmod<span class="w"> </span>lbmethod_byrequests
 <p><code>sudo apachectl -M | grep proxy</code></p>
 <h4 id="creamos-un-archivo-de-configuracion-de-apache-para-el-balanceo-de-carga">Creamos un archivo de configuración de Apache para el balanceo de carga</h4>
 <h5 id="deshabilitamos-el-sitio-por-defecto-de-apache-para-evitar-conflictos_1">Deshabilitamos el sitio por defecto de Apache para evitar conflictos</h5>
-<p><code>cd /etc/apache2/sites-available</code>
-<code>sudo a2dissite 000-default.conf</code>
-<code>sudo systemctl reload apache2.service</code></p>
+<p><code>cd /etc/apache2/sites-available</code></p>
+<p><code>sudo a2dissite 000-default.conf</code></p>
+<p><code>sudo systemctl reload apache2.service</code></p>
 <p><strong>Creamos un archivo de configuración de Apache para el balanceo de carga</strong></p>
 <p><code>sudo nano /etc/apache2/sites-available/loadbalancer.conf</code></p>
 <p>Agregamos las siguientes configuraciones:</p>
