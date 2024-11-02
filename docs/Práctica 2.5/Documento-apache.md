@@ -188,7 +188,7 @@ Verifica todos los módulos proxy:
 
 #### Creamos un archivo de configuración de Apache para el balanceo de carga
 
-##### Deshabilitamos el sitio por defecto de Apache para evitar conflictos
+**Deshabilitamos el sitio por defecto de Apache para evitar conflictos**
 
 `cd /etc/apache2/sites-available`
 
@@ -253,13 +253,12 @@ Recordemos que después de habilitar los módulos es necesario reiniciar el serv
 
 En el balanceador, agregaremos las IP y los nombres de todos los servidores backend (`web1, web2`) en el archivo **/etc/hosts**:
 
+```bash
 `# IP del servidor web1`
-
 `<IP_web1> web1.iaw2425.com`
-
-`IP del servidor web2`
-
+`#IP del servidor web2`
 `<IP_web2> web2.iaw2425.com`
+```
 
 ![alt text](image-5.png)
 
