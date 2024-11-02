@@ -1345,19 +1345,6 @@
     Creamos un archivo de configuración de Apache para el balanceo de carga
   </a>
   
-    <nav class="md-nav" aria-label="Creamos un archivo de configuración de Apache para el balanceo de carga">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#deshabilitamos-el-sitio-por-defecto-de-apache-para-evitar-conflictos_1" class="md-nav__link">
-    Deshabilitamos el sitio por defecto de Apache para evitar conflictos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -1588,19 +1575,6 @@
     Creamos un archivo de configuración de Apache para el balanceo de carga
   </a>
   
-    <nav class="md-nav" aria-label="Creamos un archivo de configuración de Apache para el balanceo de carga">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#deshabilitamos-el-sitio-por-defecto-de-apache-para-evitar-conflictos_1" class="md-nav__link">
-    Deshabilitamos el sitio por defecto de Apache para evitar conflictos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -1770,7 +1744,7 @@ a2enmod<span class="w"> </span>lbmethod_byrequests
 <p>Verifica todos los módulos proxy:</p>
 <p><code>sudo apachectl -M | grep proxy</code></p>
 <h4 id="creamos-un-archivo-de-configuracion-de-apache-para-el-balanceo-de-carga">Creamos un archivo de configuración de Apache para el balanceo de carga</h4>
-<h5 id="deshabilitamos-el-sitio-por-defecto-de-apache-para-evitar-conflictos_1">Deshabilitamos el sitio por defecto de Apache para evitar conflictos</h5>
+<p><strong>Deshabilitamos el sitio por defecto de Apache para evitar conflictos</strong></p>
 <p><code>cd /etc/apache2/sites-available</code></p>
 <p><code>sudo a2dissite 000-default.conf</code></p>
 <p><code>sudo systemctl reload apache2.service</code></p>
@@ -1811,10 +1785,11 @@ Habilitamos:</p>
 <p><code>systemctl restart apache2</code></p>
 <h3 id="configuracion-en-etchosts">Configuración en /etc/hosts</h3>
 <p>En el balanceador, agregaremos las IP y los nombres de todos los servidores backend (<code>web1, web2</code>) en el archivo <strong>/etc/hosts</strong>:</p>
-<p><code># IP del servidor web1</code></p>
-<p><code>&lt;IP_web1&gt; web1.iaw2425.com</code></p>
-<p><code>IP del servidor web2</code></p>
-<p><code>&lt;IP_web2&gt; web2.iaw2425.com</code></p>
+<div class="highlight"><pre><span></span><code><span class="sb">`</span><span class="c1"># IP del servidor web1`</span>
+<span class="sb">`</span>&lt;IP_web1&gt;<span class="w"> </span>web1.iaw2425.com<span class="sb">`</span>
+<span class="sb">`</span><span class="c1">#IP del servidor web2`</span>
+<span class="sb">`</span>&lt;IP_web2&gt;<span class="w"> </span>web2.iaw2425.com<span class="sb">`</span>
+</code></pre></div>
 <p><img alt="alt text" src="../image-5.png" /></p>
 <h3 id="pondremos-en-el-navegador-la-ip-del-servidor-balanceador-para-verificar-el-balanceo-de-carga-con-apache">Pondremos en el navegador la IP del servidor balanceador para verificar el Balanceo de carga con Apache</h3>
 <p>Teniendo en cuenta también que tendremos que configurar antes en el fichero <strong>/etc/hosts</strong> del equipo donde tenemos el navegador la <code>IP del balanceador y nombre de dominio</code> para <strong>asegurar que las solicitudes al dominio del balanceador se dirijan correctamente a la IP del balanceador</strong>, en lugar de pasar por el DNS público o por algún otro servicio de resolución de nombres.</p>
