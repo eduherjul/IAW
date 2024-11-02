@@ -1734,10 +1734,10 @@ Habilitamos:</p>
 <h2 id="creamos-el-balanceador-de-carga-de-apache">Creamos el Balanceador de Carga de Apache</h2>
 <h3 id="una-vez-actualizado-el-sistema-y-configurado-el-firewall-seguiremos-con-los-siguientes-pasos">Una vez actualizado el sistema y configurado el Firewall seguiremos con los siguientes pasos</h3>
 <h4 id="habilitamos-los-modulos-proxy-en-el-servidor-de-balanceo-de-carga">Habilitamos los módulos proxy en el servidor de balanceo de carga</h4>
-<div class="highlight"><pre><span></span><code>a2enmod<span class="w"> </span>proxy
-a2enmod<span class="w"> </span>proxy_http
-a2enmod<span class="w"> </span>proxy_balancer
-a2enmod<span class="w"> </span>lbmethod_byrequests
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>proxy
+sudo<span class="w"> </span>a2enmod<span class="w"> </span>proxy_http
+sudo<span class="w"> </span>a2enmod<span class="w"> </span>proxy_balancer
+sudo<span class="w"> </span>a2enmod<span class="w"> </span>lbmethod_byrequests
 </code></pre></div>
 <p>Reiniciamos el servicio Apache:</p>
 <p><code>sudo systemctl restart apache2</code></p>
