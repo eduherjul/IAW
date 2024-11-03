@@ -165,6 +165,13 @@ Habilitamos:
 
 `sudo systemctl reload apache2`
 
+Podemos automatizar la configuración de backends con un script
+
+**Puedes ver el script** [aquí](script-backend.md)
+
+[Descargar el archivo](./scripts/dscript-backend.sh)
+
+
 ## Creamos el Balanceador de Carga de Apache
 
 ### Una vez actualizado el sistema y configurado el Firewall seguiremos con los siguientes pasos
@@ -271,3 +278,9 @@ Teniendo en cuenta también que tendremos que configurar antes en el fichero **/
 ![alt text](image-11.png)
 
 #### Tenemos que tener en cuenta el configurar la IP y el nombre del dominio en el balanceador en el fichero /etc/hosts , pero sino trabajamos con nombres de dominio solo con IP nos valdrá
+
+Podemos automatizar la configuración del balanceador con un script
+
+**Puedes ver el script** [aquí](script-balancer.md)
+
+[Descargar el archivo](./scripts/dscript-balancer.sh)

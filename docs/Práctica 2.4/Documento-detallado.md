@@ -2,15 +2,15 @@
 
 ## PASO 1: Configurar el Servidor 2 (Mysql)
 
-### Actualizar el sistema e instalar Mysql.
+### Actualizar el sistema e instalar Mysql
 
 `sudo apt update && sudo apt upgrade -y`
 
-### Instalar Mysql.
+### Instalar Mysql
 
 `sudo apt install mysql-server`
 
-### Acceder a Mysql como administrador root.
+### Acceder a Mysql como administrador root
 
 `sudo mysql -u root`
 
@@ -52,14 +52,13 @@ De esta forma, con un script descargamos mysql y el servidor queda listo para so
 
 [Descargar el archivo](./scripts/Mysql-para-wordpress.sh)
 
-
 ## PASO 2: Instalar Apache, PHP, las extensiones necesarias y descargar e instalar Wordpress
 
-### Instalamos Apache que será el servidor web donde se alojará Wordpress.
+### Instalamos Apache que será el servidor web donde se alojará Wordpress
 
 `sudo apt install apache2 -y`
 
-#### Instalamos PHP y las extensiones necesarias.
+#### Instalamos PHP y las extensiones necesarias
 
 `sudo apt update`
 
@@ -69,11 +68,11 @@ De esta forma, con un script descargamos mysql y el servidor queda listo para so
 
 `sudo apt install php-json php-mbstring php-mysql php-xml php-zip`
 
-### Reiniciamos apache para que los cambios surtan efecto.
+### Reiniciamos apache para que los cambios surtan efecto
 
    `sudo systemctl restart apache2.service`
 
-### Descargamos la última versión de WordPress y colocamos en la carpeta web de Apache.
+### Descargamos la última versión de WordPress y colocamos en la carpeta web de Apache
 
 `cd /tmp`
 
@@ -83,25 +82,25 @@ De esta forma, con un script descargamos mysql y el servidor queda listo para so
 
 `sudo mv wordpress /var/www/html/`
 
-### Cambiamos la propiedad y permisos de los archivos.
+### Cambiamos la propiedad y permisos de los archivos
 
 `sudo chown -R www-data:www-data /var/www/html/wordpress`
 
 `sudo chmod -R 755 /var/www/html/wordpress`
 
-### Configurar WordPress para conectarse a la base de datos.
+### Configurar WordPress para conectarse a la base de datos
 
 `cd /var/www/html/wordpress`
 
-### Copiamos el archivo de configuración.
+### Copiamos el archivo de configuración
 
 `cp wp-config-sample.php wp-config.php`
 
-### Editamos el archivo de configuración de WordPress.
+### Editamos el archivo de configuración de WordPress
 
 `sudo nano wp-config.php`
 
-### Cambiamos las siguientes líneas para apuntar al "Servidor 2" (MySQL) en lugar de usar "localhost".
+### Cambiamos las siguientes líneas para apuntar al "Servidor 2" (MySQL) en lugar de usar "localhost"
 
 `define('DB_NAME', 'wordpress_db');     // Nombre de la base de datos`
 
@@ -113,11 +112,11 @@ De esta forma, con un script descargamos mysql y el servidor queda listo para so
 
 ![alt text](image-3.png)
 
-### Configuramos Apache para WordPress creando un archivo de configuración para el sitio de WordPress en Apache.
+### Configuramos Apache para WordPress creando un archivo de configuración para el sitio de WordPress en Apache
 
 `sudo nano /etc/apache2/sites-available/wordpress.conf`
 
-### Agregamos lo siguiente:
+### Agregamos lo siguiente
 
 ```bash
 <VirtualHost *:80>
@@ -137,16 +136,16 @@ De esta forma, con un script descargamos mysql y el servidor queda listo para so
 
 ![alt text](image-4.png)
 
-### Luego habilitamos el nuevo sitio de WordPress y el módulo de reescritura de Apache:
+### Luego habilitamos el nuevo sitio de WordPress y el módulo de reescritura de Apache
 
 `sudo a2ensite wordpress.conf`
 `sudo a2enmod rewrite`
 
-### Deshabilitamos el sitio predeterminado “It Works” con:
+### Deshabilitamos el sitio predeterminado “It Works” con
 
 `sudo a2dissite 000-default`
 
-### Reiniciamos Apache para aplicar los cambios:
+### Reiniciamos Apache para aplicar los cambios
 
 `sudo systemctl restart apache2`
 
@@ -167,4 +166,3 @@ De esta forma con un script:
 ** Puedes ver el script [aquí](Apache-wordpress-php.md)
 
 [Descargar el archivo](./scripts/Apache-wordpress-php.sh)
-

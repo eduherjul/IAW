@@ -1782,7 +1782,7 @@ Habilitamos:</p>
 <p><code>sudo a2enmod lbmethod_byrequests</code></p>
 <p>Este método de balanceo también permite distribuir las peticiones entre los servidores en función de los parámetros <code>lbfactor y lbstatus</code>.</p>
 <p>Recordemos que después de habilitar los módulos es necesario reiniciar el servicio de Apache:</p>
-<p><code>systemctl restart apache2</code></p>
+<p><code>sudo systemctl restart apache2.service</code></p>
 <h3 id="configuracion-en-etchosts">Configuración en /etc/hosts</h3>
 <p>En el balanceador, agregaremos las IP y los nombres de todos los servidores backend (<code>web1, web2</code>) en el archivo <strong>/etc/hosts</strong>:</p>
 <div class="highlight"><pre><span></span><code><span class="sb">`</span><span class="c1"># IP del servidor web1`</span>
