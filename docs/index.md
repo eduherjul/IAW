@@ -8,4 +8,4 @@
 * Práctica 2.3: Instalar, configurar y securizar phpMyAdmin
 * Práctica 2.4: Instalar, configurar Wordpress
 * Práctica 2.5: Balanceo de carga con Apache
-* RExamen_UD2:  Implantación de aplicaciones web PHP
+* Examen_UD2:  Implantación de aplicaciones web PHP

@@ -315,4 +315,5 @@ Agregamos las siguientes líneas al fichero **(por el puerto 443)**
 Abre a nuestro navegador web y accedemos a **http://tu_dominio_o_IP/wordpress**. Seguimos las instrucciones del instalador de WordPress:
 
 ![alt text](image-25.png)
+
 ![alt text](image-26.png)
