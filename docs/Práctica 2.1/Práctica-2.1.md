@@ -9,10 +9,6 @@ paginate: true
 
 ---
 
-<div style="text-align: center;">
-    <h2>Implantación de una web estática con Apache</h2>
-</div>
-
 ---
 
 Vamos construir en nuestro servidor web apache dos sitios web con las siguientes características:

@@ -21,6 +21,9 @@ nav:
   - Práctica2.5:
       - Detalle documento:
           - Práctica 2.5/Documento-apache.md
+  - RExamen_UD2:
+      - Documento examen:
+          - Implantación de aplicaciones web PHP
 docs_dir: docs
 site_dir: site
 theme:
