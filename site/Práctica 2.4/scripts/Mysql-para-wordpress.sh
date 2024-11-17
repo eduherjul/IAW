@@ -25,6 +25,7 @@ if [ $sino -eq 0 ]; then
   sudo apt update -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 fi
 
+clear
 #Instalación MySQL
 sudo apt install mysql-server -y
 
@@ -70,7 +71,7 @@ GRANT ALL PRIVILEGES ON *.* TO '$nomuser'@'%';
 flush privileges;"
 
 #Ejecutamos los comandos SQL en mysql
-sudo mysql -u root -p"$passwdmysqlroot" -e "$sqlcomandosphp"
+sudo mysql -u root -p "$passwdmysqlroot" -e "$sqlcomandosphp"
 
 #Permitir conexiones remotas habilitando el acceso a Mysql
 sudo sed -i "31s/.*/bind-address            = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
