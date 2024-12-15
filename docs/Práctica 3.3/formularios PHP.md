@@ -4,7 +4,7 @@
 
 ** Podemos ver el fichero.html [aquí](operacionesBBDD.md)
 
-[Descargar el archivo](./operacionesBBDD.html)
+[Descargar el archivo](operacionesBBDD.html.zip)
 
 ![alt text](image.png)
 
