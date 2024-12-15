@@ -447,7 +447,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Práctica 3.3/formularios PHP.md" class="md-tabs__link">
+        <a href="../formularios_PHP/" class="md-tabs__link">
           
   
     
@@ -1603,11 +1603,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Práctica 3.3/formularios PHP.md" class="md-nav__link">
+      <a href="../formularios_PHP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    None
+    Práctica 3.3 - Actividad Práctica de MySQL con Formularios en PHP
   </span>
   
 
@@ -1665,34 +1665,33 @@
 
   <h1>Buscar php</h1>
 
-<p>```php</p>
-<?php
-  // Configuración de conexión
-  $servidor = "localhost:3306";
-  $usuario = "alumne";
-  $password = "alumne";
-  $nomBBDD = "instituto";
-  $nomtabla = "estudiantes";
+<div class="highlight"><pre><span></span><code><span class="x">  </span><span class="cp">&lt;?php</span>
+  <span class="c1">// Configuración de conexión</span>
+  <span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">&quot;localhost:3306&quot;</span><span class="p">;</span>
+  <span class="nv">$usuario</span> <span class="o">=</span> <span class="s2">&quot;alumne&quot;</span><span class="p">;</span>
+  <span class="nv">$password</span> <span class="o">=</span> <span class="s2">&quot;alumne&quot;</span><span class="p">;</span>
+  <span class="nv">$nomBBDD</span> <span class="o">=</span> <span class="s2">&quot;instituto&quot;</span><span class="p">;</span>
+  <span class="nv">$nomtabla</span> <span class="o">=</span> <span class="s2">&quot;estudiantes&quot;</span><span class="p">;</span>
 
-  // Conexion a la base de datos
-  $conexion = new mysqli($servidor, $usuario, $password, $nomBBDD) or
-    die("Problemas con la conexión");
+  <span class="c1">// Conexion a la base de datos</span>
+  <span class="nv">$conexion</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mysqli</span><span class="p">(</span><span class="nv">$servidor</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$nomBBDD</span><span class="p">)</span> <span class="k">or</span>
+    <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Problemas con la conexión&quot;</span><span class="p">);</span>
 
-  // Recuperar datos desde MySQL 
-  $consulta = "SELECT id,nombre,edad FROM $nomtabla WHERE id='$_REQUEST[id]'";
-  $registros = mysqli_query($conexion, $consulta);
+  <span class="c1">// Recuperar datos desde MySQL </span>
+  <span class="nv">$consulta</span> <span class="o">=</span> <span class="s2">&quot;SELECT id,nombre,edad FROM </span><span class="si">$nomtabla</span><span class="s2"> WHERE id=&#39;</span><span class="si">$_REQUEST[id]</span><span class="s2">&#39;&quot;</span><span class="p">;</span>
+  <span class="nv">$registros</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$conexion</span><span class="p">,</span> <span class="nv">$consulta</span><span class="p">);</span>
 
-  //Mostrar resultados
-  while ($reg = mysqli_fetch_array($registros)) {
-    echo "DATOS OBTENIDOS:<br><br>";
-    echo "Identificador: " . $reg['id'] . "<br>";
-    echo "Nombre: " . $reg['nombre'] . "<br>";
-    echo "Edad: " . $reg['edad'] . "<br>";
-  }
-  // Cerrar la conexion
-  mysqli_close($conexion);
-  ?>
-<p>```</p>
+  <span class="c1">//Mostrar resultados</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nv">$reg</span> <span class="o">=</span> <span class="nx">mysqli_fetch_array</span><span class="p">(</span><span class="nv">$registros</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;DATOS OBTENIDOS:&lt;br&gt;&lt;br&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;Identificador: &quot;</span> <span class="o">.</span> <span class="nv">$reg</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;Nombre: &quot;</span> <span class="o">.</span> <span class="nv">$reg</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;Edad: &quot;</span> <span class="o">.</span> <span class="nv">$reg</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">// Cerrar la conexion</span>
+  <span class="nx">mysqli_close</span><span class="p">(</span><span class="nv">$conexion</span><span class="p">);</span>
+  <span class="cp">?&gt;</span>
+</code></pre></div>
 
 
 
