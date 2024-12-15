@@ -2,9 +2,9 @@
 
 ## 1.-Fichero para el menú en .html
 
-** Podemos ver el fichero.html [aquí](operacionesBBDD.md)
+**Podemos ver el fichero.html [aquí](operacionesBBDD.md)**
 
-[Descargar el archivo](operacionesBBDD.html.zip)
+**[Descargar el archivo](operacionesBBDD.html.zip)**
 
 ![alt text](image.png)
 
@@ -12,9 +12,9 @@
 
 **Crearemos la BBDD y la tabla.**
 
-** Podemos ver el fichero.php [aquí](crearBBDD.md)
+**Podemos ver el fichero.php [aquí](crearBBDD.md)**
 
-[Descargar el archivo](./crearBBDD.php)
+**[Descargar el archivo](./crearBBDD.php)**
 
 ![alt text](image-1.png)
 
@@ -24,9 +24,9 @@
 
 **Creamos un formulario para que el usuario pueda agregar estudiantes.**
 
-** Podemos ver el fichero.html [aquí](insertar-html.md)
+**Podemos ver el fichero.html [aquí](insertar-html.md)**
 
-[Descargar el archivo](insertar.html.zip)
+**[Descargar el archivo](insertar.html.zip)**
 
 ![alt text](image-2.png)
 
@@ -34,9 +34,9 @@
 
 **Este script recibe los datos del formulario y los inserta en la tabla.**
 
-** Podemos ver el fichero.php [aquí](insertar-php.md)
+**Podemos ver el fichero.php [aquí](insertar-php.md)**
 
-[Descargar el archivo](./insertar.php)
+**[Descargar el archivo](./insertar.php)**
 
 ![alt text](image-3.png)
 
@@ -46,9 +46,9 @@
 
 **Creamos un formulario para buscar registros por código.**
 
-** Podemos ver el fichero.html [aquí](buscar-html.md)
+**Podemos ver el fichero.html [aquí](buscar-html.md)**
 
-[Descargar el archivo](buscar.html.zip)
+**[Descargar el archivo](buscar.html.zip)**
 
 ![alt text](image-6.png)
 
@@ -56,9 +56,9 @@
 
 **Este script busca registros según el código ingresado.**
 
-** Podemos ver el fichero.php [aquí](buscar-php.md)
+**Podemos ver el fichero.php [aquí](buscar-php.md)**
 
-[Descargar el archivo](./buscar.php)
+**[Descargar el archivo](./buscar.php)**
 
 ![alt text](image-7.png)
 
@@ -66,9 +66,9 @@
 
 **Creamos un formulario que redirige a un script para mostrar los registros y seleccionar si eliminarlo (delete) o modificarlo (update).**
 
-** Podemos ver el fichero.html [aquí](listar-html.md)
+**Podemos ver el fichero.html [aquí](listar-html.md)**
 
-[Descargar el archivo](listar.html.zip)
+**[Descargar el archivo](listar.html.zip)**
 
 ![alt text](image-8.png)
 
@@ -76,9 +76,9 @@
 
 **Este script recupera todos los registros de la tabla.**
 
-** Podemos ver el fichero.php [aquí](listar-php.md)
+**Podemos ver el fichero.php [aquí](listar-php.md)**
 
-[Descargar el archivo](./listar.php)
+**[Descargar el archivo](./listar.php)**
 
 ![alt text](image-9.png)
 
@@ -86,9 +86,9 @@
 
 **Este script elimina un registro de la tabla por ID.**
 
-** Podemos ver el fichero.php [aquí](eliminar.md)
+**Podemos ver el fichero.php [aquí](eliminar.md)**
 
-[Descargar el archivo](./eliminar.php)
+**[Descargar el archivo](./eliminar.php)**
 
 ![alt text](image-10.png)
 
@@ -100,9 +100,9 @@
 
 **Este script lista un registro de la tabla por ID con sus datos para poder modificarlos.**
 
-** Podemos ver el fichero.php formulario [aquí](modificar.md)
+**Podemos ver el fichero.php formulario [aquí](modificar.md)**
 
-[Descargar el archivo](./modificar.php)
+**[Descargar el archivo](./modificar.php)**
 
 ![alt text](image-13.png)
 
@@ -110,9 +110,9 @@
 
 ### 11.-Script para manejar la actualización (update)
 
-** Podemos ver el fichero.php [aquí](guardarcambios.md)
+**Podemos ver el fichero.php [aquí](guardarcambios.md)**
 
-[Descargar el archivo](./guardarcambios.php)
+**[Descargar el archivo](./guardarcambios.php)**
 
 **Este script actualiza los datos del estudiante y guarda estos.**
 
