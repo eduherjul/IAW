@@ -24,7 +24,7 @@
 
 **Creamos un formulario para que el usuario pueda agregar estudiantes.**
 
-**Podemos ver el fichero.html [aquí](insertar-html.md)**
+**Podemos ver el fichero.html [aquí](insertar_html.md)**
 
 **[Descargar el archivo](insertar.html.zip)**
 
@@ -34,7 +34,7 @@
 
 **Este script recibe los datos del formulario y los inserta en la tabla.**
 
-**Podemos ver el fichero.php [aquí](insertar-php.md)**
+**Podemos ver el fichero.php [aquí](insertar_php.md)**
 
 **[Descargar el archivo](./insertar.php)**
 
@@ -46,7 +46,7 @@
 
 **Creamos un formulario para buscar registros por código.**
 
-**Podemos ver el fichero.html [aquí](buscar-html.md)**
+**Podemos ver el fichero.html [aquí](buscar_html.md)**
 
 **[Descargar el archivo](buscar.html.zip)**
 
@@ -56,7 +56,7 @@
 
 **Este script busca registros según el código ingresado.**
 
-**Podemos ver el fichero.php [aquí](buscar-php.md)**
+**Podemos ver el fichero.php [aquí](buscar_php.md)**
 
 **[Descargar el archivo](./buscar.php)**
 
@@ -66,7 +66,7 @@
 
 **Creamos un formulario que redirige a un script para mostrar los registros y seleccionar si eliminarlo (delete) o modificarlo (update).**
 
-**Podemos ver el fichero.html [aquí](listar-html.md)**
+**Podemos ver el fichero.html [aquí](listar_html.md)**
 
 **[Descargar el archivo](listar.html.zip)**
 
@@ -76,7 +76,7 @@
 
 **Este script recupera todos los registros de la tabla.**
 
-**Podemos ver el fichero.php [aquí](listar-php.md)**
+**Podemos ver el fichero.php [aquí](listar_php.md)**
 
 **[Descargar el archivo](./listar.php)**
 
