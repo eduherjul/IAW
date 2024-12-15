@@ -1,4 +1,5 @@
 ```php
+
   <?php
   // Configuración de conexión
   $servidor = "localhost:3306";
@@ -22,7 +23,6 @@
     echo "Nombre: " . $reg['nombre'] . "<br>";
     echo "Edad: " . $reg['edad'] . "<br>";
   }
-  
   // Cerrar la conexion
   mysqli_close($conexion);
   ?>
