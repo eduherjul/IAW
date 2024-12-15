@@ -26,7 +26,7 @@
 
 ** Podemos ver el fichero.html [aquí](insertar-html.md)
 
-[Descargar el archivo](./insertar.html)
+[Descargar el archivo](insertar.html.zip)
 
 ![alt text](image-2.png)
 
@@ -48,7 +48,7 @@
 
 ** Podemos ver el fichero.html [aquí](buscar-html.md)
 
-[Descargar el archivo](./buscar.html)
+[Descargar el archivo](buscar.html.zip)
 
 ![alt text](image-6.png)
 
@@ -68,7 +68,7 @@
 
 ** Podemos ver el fichero.html [aquí](listar-html.md)
 
-[Descargar el archivo](./listar.html)
+[Descargar el archivo](listar.html.zip)
 
 ![alt text](image-8.png)
 
