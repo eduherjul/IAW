@@ -28,8 +28,8 @@
             <button type='submit' name='eliminar'>Eliminar</button>
           </form>";
 
-    // Botón para actualizar el registro
-    echo "<form method='post' action='actualizar.php'>
+    // Botón para modificar el registro
+    echo "<form method='post' action='modificar.php'>
             <input type='hidden' name='id' value='" . $reg['id'] . "' />
             <button type='submit' name='modificar'>Modificar</button>
           </form>";
