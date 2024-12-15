@@ -18,7 +18,7 @@
     
     
       
-        <title>Listar html - Edu-mkdocs</title>
+        <title>Práctica 3.3 - Actividad Práctica de MySQL con Formularios en PHP - Edu-mkdocs</title>
       
     
     
@@ -72,6 +72,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#practica-33-actividad-practica-de-mysql-con-formularios-en-php" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Listar html
+              Práctica 3.3 - Actividad Práctica de MySQL con Formularios en PHP
             
           </span>
         </div>
@@ -447,7 +452,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../formularios%20PHP/" class="md-tabs__link">
+        <a href="../../Práctica 3.3/formularios PHP.md" class="md-tabs__link">
           
   
     
@@ -1603,11 +1608,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../formularios%20PHP/" class="md-nav__link">
+      <a href="../../Práctica 3.3/formularios PHP.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Práctica 3.3 - Actividad Práctica de MySQL con Formularios en PHP
+    None
   </span>
   
 
@@ -1649,6 +1654,99 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fichero-para-el-menu-en-html" class="md-nav__link">
+    1.-Fichero para el menú en .html
+  </a>
+  
+    <nav class="md-nav" aria-label="1.-Fichero para el menú en .html">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-script-para-la-creacion-la-bbdd-y-tabla" class="md-nav__link">
+    2.-Script para la creación la BBDD y tabla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-formulario-para-insertar-registros" class="md-nav__link">
+    3.-Formulario para insertar registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-script-para-manejar-la-insercion" class="md-nav__link">
+    4.-Script para manejar la inserción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-formulario-para-buscar-registros" class="md-nav__link">
+    5.-Formulario para buscar registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-script-para-manejar-la-busqueda" class="md-nav__link">
+    6.-Script para manejar la búsqueda
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-formulario-para-listar-registros-y-eliminarlos-o-modificarlos" class="md-nav__link">
+    7.-Formulario para listar registros y eliminarlos o modificarlos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-script-para-manejar-el-listado" class="md-nav__link">
+    8.-Script para manejar el listado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-script-para-manejar-la-eliminacion" class="md-nav__link">
+    9.-Script para manejar la eliminación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-script-formulario-para-manejar-la-modificacion" class="md-nav__link">
+    10.-Script-formulario para manejar la modificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-script-para-manejar-la-actualizacion-update" class="md-nav__link">
+    11.-Script para manejar la actualización (update)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1663,21 +1761,68 @@
                   
 
 
-  <h1>Listar html</h1>
-
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Listado<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Listado de Estudiantes<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;listar.php&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Listar Estudiantes&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
+<h1 id="practica-33-actividad-practica-de-mysql-con-formularios-en-php">Práctica 3.3 - Actividad Práctica de MySQL con Formularios en PHP</h1>
+<h2 id="1-fichero-para-el-menu-en-html">1.-Fichero para el menú en .html</h2>
+<p><strong>Podemos ver el fichero.html <a href="../operacionesBBDD/">aquí</a></strong></p>
+<p><strong><a href="../operacionesBBDD.html.zip">Descargar el archivo</a></strong></p>
+<p><img alt="alt text" src="../image.png" /></p>
+<h3 id="2-script-para-la-creacion-la-bbdd-y-tabla">2.-Script para la creación la BBDD y tabla</h3>
+<p><strong>Crearemos la BBDD y la tabla.</strong></p>
+<p><strong>Podemos ver el fichero.php <a href="../crearBBDD/">aquí</a></strong></p>
+<p><strong><a href="../crearBBDD.php">Descargar el archivo</a></strong></p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<p><img alt="alt text" src="../image-4.png" /></p>
+<h3 id="3-formulario-para-insertar-registros">3.-Formulario para insertar registros</h3>
+<p><strong>Creamos un formulario para que el usuario pueda agregar estudiantes.</strong></p>
+<p><strong>Podemos ver el fichero.html <a href="../insertar_html/">aquí</a></strong></p>
+<p><strong><a href="../insertar.html.zip">Descargar el archivo</a></strong></p>
+<p><img alt="alt text" src="../image-2.png" /></p>
+<h3 id="4-script-para-manejar-la-insercion">4.-Script para manejar la inserción</h3>
+<p><strong>Este script recibe los datos del formulario y los inserta en la tabla.</strong></p>
+<p><strong>Podemos ver el fichero.php <a href="../insertar_php/">aquí</a></strong></p>
+<p><strong><a href="../insertar.php">Descargar el archivo</a></strong></p>
+<p><img alt="alt text" src="../image-3.png" /></p>
+<p><img alt="alt text" src="../image-5.png" /></p>
+<h3 id="5-formulario-para-buscar-registros">5.-Formulario para buscar registros</h3>
+<p><strong>Creamos un formulario para buscar registros por código.</strong></p>
+<p><strong>Podemos ver el fichero.html <a href="../buscar_html/">aquí</a></strong></p>
+<p><strong><a href="../buscar.html.zip">Descargar el archivo</a></strong></p>
+<p><img alt="alt text" src="../image-6.png" /></p>
+<h3 id="6-script-para-manejar-la-busqueda">6.-Script para manejar la búsqueda</h3>
+<p><strong>Este script busca registros según el código ingresado.</strong></p>
+<p><strong>Podemos ver el fichero.php <a href="../buscar_php/">aquí</a></strong></p>
+<p><strong><a href="../buscar.php">Descargar el archivo</a></strong></p>
+<p><img alt="alt text" src="../image-7.png" /></p>
+<h3 id="7-formulario-para-listar-registros-y-eliminarlos-o-modificarlos">7.-Formulario para listar registros y eliminarlos o modificarlos</h3>
+<p><strong>Creamos un formulario que redirige a un script para mostrar los registros y seleccionar si eliminarlo (delete) o modificarlo (update).</strong></p>
+<p><strong>Podemos ver el fichero.html <a href="../listar_html/">aquí</a></strong></p>
+<p><strong><a href="../listar.html.zip">Descargar el archivo</a></strong></p>
+<p><img alt="alt text" src="../image-8.png" /></p>
+<h3 id="8-script-para-manejar-el-listado">8.-Script para manejar el listado</h3>
+<p><strong>Este script recupera todos los registros de la tabla.</strong></p>
+<p><strong>Podemos ver el fichero.php <a href="../listar_php/">aquí</a></strong></p>
+<p><strong><a href="../listar.php">Descargar el archivo</a></strong></p>
+<p><img alt="alt text" src="../image-9.png" /></p>
+<h3 id="9-script-para-manejar-la-eliminacion">9.-Script para manejar la eliminación</h3>
+<p><strong>Este script elimina un registro de la tabla por ID.</strong></p>
+<p><strong>Podemos ver el fichero.php <a href="../eliminar/">aquí</a></strong></p>
+<p><strong><a href="../eliminar.php">Descargar el archivo</a></strong></p>
+<p><img alt="alt text" src="../image-10.png" /></p>
+<p><img alt="alt text" src="../image-12.png" /></p>
+<p><img alt="alt text" src="../image-11.png" /></p>
+<h3 id="10-script-formulario-para-manejar-la-modificacion">10.-Script-formulario para manejar la modificación</h3>
+<p><strong>Este script lista un registro de la tabla por ID con sus datos para poder modificarlos.</strong></p>
+<p><strong>Podemos ver el fichero.php formulario <a href="../modificar/">aquí</a></strong></p>
+<p><strong><a href="../modificar.php">Descargar el archivo</a></strong></p>
+<p><img alt="alt text" src="../image-13.png" /></p>
+<p><img alt="alt text" src="../image-14.png" /></p>
+<h3 id="11-script-para-manejar-la-actualizacion-update">11.-Script para manejar la actualización (update)</h3>
+<p><strong>Podemos ver el fichero.php <a href="../guardarcambios/">aquí</a></strong></p>
+<p><strong><a href="../guardarcambios.php">Descargar el archivo</a></strong></p>
+<p><strong>Este script actualiza los datos del estudiante y guarda estos.</strong></p>
+<p><img alt="alt text" src="../image-15.png" /></p>
+<p><img alt="alt text" src="../image-16.png" /></p>
+<p><img alt="alt text" src="../image-17.png" /></p>
 
 
 

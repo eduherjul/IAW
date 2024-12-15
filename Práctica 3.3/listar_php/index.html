@@ -18,7 +18,7 @@
     
     
       
-        <title>Insertar php - Edu-mkdocs</title>
+        <title>Listar php - Edu-mkdocs</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Insertar php
+              Listar php
             
           </span>
         </div>
@@ -447,7 +447,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../formularios%20PHP/" class="md-tabs__link">
+        <a href="../../Práctica 3.3/formularios PHP.md" class="md-tabs__link">
           
   
     
@@ -1603,11 +1603,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../formularios%20PHP/" class="md-nav__link">
+      <a href="../../Práctica 3.3/formularios PHP.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Práctica 3.3 - Actividad Práctica de MySQL con Formularios en PHP
+    None
   </span>
   
 
@@ -1663,7 +1663,7 @@
                   
 
 
-  <h1>Insertar php</h1>
+  <h1>Listar php</h1>
 
 <div class="highlight"><pre><span></span><code><span class="x">  </span><span class="cp">&lt;?php</span>
   <span class="c1">// Configuración de conexión</span>
@@ -1677,13 +1677,34 @@
   <span class="nv">$conexion</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mysqli</span><span class="p">(</span><span class="nv">$servidor</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$nomBBDD</span><span class="p">)</span> <span class="k">or</span>
     <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Problemas con la conexión&quot;</span><span class="p">);</span>
 
-  <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$conexion</span><span class="p">,</span> <span class="s2">&quot;insert into </span><span class="si">$nomtabla</span><span class="s2">(nombre,edad) values </span>
-<span class="s2">                        (&#39;</span><span class="si">$_REQUEST[nombre]</span><span class="s2">&#39;,&#39;</span><span class="si">$_REQUEST[edad]</span><span class="s2">&#39;)&quot;</span><span class="p">)</span>
-    <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Problemas en el select&quot;</span> <span class="o">.</span> <span class="nx">mysqli_error</span><span class="p">(</span><span class="nv">$conexion</span><span class="p">));</span>
+  <span class="c1">// Recuperar datos desde MySQL </span>
+  <span class="nv">$consulta</span> <span class="o">=</span> <span class="s2">&quot;SELECT id, nombre, edad FROM </span><span class="si">$nomtabla</span><span class="s2">&quot;</span><span class="p">;</span>
+  <span class="nv">$registros</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$conexion</span><span class="p">,</span> <span class="nv">$consulta</span><span class="p">);</span>
 
+  <span class="c1">//Mostrar resultados</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nv">$reg</span> <span class="o">=</span> <span class="nx">mysqli_fetch_array</span><span class="p">(</span><span class="nv">$registros</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;Codigo: &quot;</span> <span class="o">.</span> <span class="nv">$reg</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;Nombre: &quot;</span> <span class="o">.</span> <span class="nv">$reg</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;Edad: &quot;</span> <span class="o">.</span> <span class="nv">$reg</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;&quot;</span><span class="p">;</span>
+
+    <span class="c1">// Botón para eliminar el registro</span>
+    <span class="k">echo</span> <span class="s2">&quot;&lt;form method=&#39;post&#39; action=&#39;eliminar.php&#39;&gt;</span>
+<span class="s2">            &lt;input type=&#39;hidden&#39; name=&#39;id&#39; value=&#39;&quot;</span> <span class="o">.</span> <span class="nv">$reg</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&#39; /&gt;</span>
+<span class="s2">            &lt;button type=&#39;submit&#39; name=&#39;eliminar&#39;&gt;Eliminar&lt;/button&gt;</span>
+<span class="s2">          &lt;/form&gt;&quot;</span><span class="p">;</span>
+
+    <span class="c1">// Botón para modificar el registro</span>
+    <span class="k">echo</span> <span class="s2">&quot;&lt;form method=&#39;post&#39; action=&#39;modificar.php&#39;&gt;</span>
+<span class="s2">            &lt;input type=&#39;hidden&#39; name=&#39;id&#39; value=&#39;&quot;</span> <span class="o">.</span> <span class="nv">$reg</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&#39; /&gt;</span>
+<span class="s2">            &lt;button type=&#39;submit&#39; name=&#39;modificar&#39;&gt;Modificar&lt;/button&gt;</span>
+<span class="s2">          &lt;/form&gt;&quot;</span><span class="p">;</span>
+
+    <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;&lt;hr&gt;&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Cerrar la conexion</span>
   <span class="nx">mysqli_close</span><span class="p">(</span><span class="nv">$conexion</span><span class="p">);</span>
-
-  <span class="k">echo</span> <span class="s2">&quot;El estudiante &#39;</span><span class="si">$_REQUEST[nombre]</span><span class="s2">&#39; fue dado de alta.&quot;</span><span class="p">;</span>
   <span class="cp">?&gt;</span>
 </code></pre></div>
 
