@@ -1,0 +1,14 @@
+```html
+<html>
+  <head>
+    <title>Listado</title>
+  </head>
+
+  <body>
+    <h1>Listado de Estudiantes</h1>
+    <form method="POST" action="listar.php">
+      <input type="submit" value="Listar Estudiantes" />
+    </form>
+  </body>
+</html>
+```

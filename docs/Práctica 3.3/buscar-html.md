@@ -1,0 +1,17 @@
+```html
+<html>
+  <head>
+    <title>Búsqueda</title>
+  </head>
+
+  <body>
+    <h1>Busqueda de Estudiante</h1>
+    <form method="POST" action="buscar.php">
+      Ingrese el identificador del estudiante a buscar:
+      <input type="=text" name="id" />
+      <br /><br />
+      <input type="submit" value="Mostrar Alumno" />
+    </form>
+  </body>
+</html>
+```

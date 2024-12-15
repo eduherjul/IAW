@@ -1,0 +1,32 @@
+```html
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Operaciones con Base de Datos</title>
+  </head>
+  <body>
+    <h1>WEB/APP</h1>
+
+    <form action="crearBBDD.php" method="post">
+      <input type="submit" value="CREAR BBDD" />
+    </form>
+    <br />
+
+    <form action="insertar.html" method="post">
+      <input type="submit" value="INSERTAR DATOS" />
+    </form>
+    <br />
+
+    <form action="buscar.html" method="post">
+      <input type="submit" value="BUSCAR DATOS POR CODIGO" />
+    </form>
+    <br />
+
+    <form action="listar.html" method="post">
+      <input type="submit" value="LISTAR DATOS" />
+    </form>
+    <br />
+  </body>
+</html>
+```
