@@ -2,7 +2,7 @@
 
 ## 1.-Formulario .html para el menú
 
-**Podemos ver el fichero.html [aquí](operacionesBBDD.html.md)**
+**Podemos ver el fichero.html [aquí](operacionesBBDD_html.md)**
 
 **[Descargar el archivo](operacionesBBDD.html.zip)**
 
@@ -10,7 +10,7 @@
 
 ## 2.-Fichero script .php para la creación de la BBDD y tabla
 
-**Podemos ver el fichero.php [aquí](crearBBDD.php.md)**
+**Podemos ver el fichero.php [aquí](crearBBDD_php.md)**
 
 **[Descargar el archivo](crearBBDD.php)**
 
@@ -26,11 +26,11 @@
 
 **Creamos un formulario para que el usuario se puede registrar.**
 
-**Podemos ver el fichero.ccs [aquí](estilos.ccs.md)**
+**Podemos ver el fichero.ccs [aquí](estilos_ccs.md)**
 
 **[Descargar el archivo](estilos.ccs)**
 
-**Podemos ver el fichero.html [aquí](registro.html.md)**
+**Podemos ver el fichero.html [aquí](registro_html.md)**
 
 **[Descargar el archivo](registro.html.zip)**
 
@@ -38,7 +38,7 @@
 
 ## 4.-Fichero script .php para registrarse
 
-**Podemos ver el fichero.php [aquí](insertar.php.md)**
+**Podemos ver el fichero.php [aquí](insertar_php.md)**
 
 **[Descargar el archivo](insertar.php)**
 
@@ -56,11 +56,11 @@
 
 ## 5.-Formulario para hacer "login"
 
-**Podemos ver el fichero.ccs [aquí](inicio.css.md)**
+**Podemos ver el fichero.ccs [aquí](inicio_css.md)**
 
 **[Descargar el archivo](inicio.css)**
 
-**Podemos ver el fichero.html [aquí](login.html.md)**
+**Podemos ver el fichero.html [aquí](login_html.md)**
 
 **[Descargar el archivo](login.html.zip)**
 
@@ -68,7 +68,7 @@
 
 ## 6.-Fichero script .php para iniciar el login de sesión
 
-**Podemos ver el fichero.php [aquí](login.php.md)**
+**Podemos ver el fichero.php [aquí](login_php.md)**
 
 **[Descargar el archivo](login.php)**
 
@@ -80,7 +80,7 @@
 
 **[Descargar el archivo de imagen](7883511.jpg)**
 
-**Podemos ver el fichero.php [aquí](protegida.php.md)**
+**Podemos ver el fichero.php [aquí](protegida_php.md)**
 
 **[Descargar el archivo](protegida.php)**
 
@@ -100,7 +100,7 @@
 
 ## 8.-Fichero script .php para el control se sesión después del usuario del último login
 
-**Podemos ver el fichero.php [aquí](control_sesion.php.md)**
+**Podemos ver el fichero.php [aquí](control_sesion_php.md)**
 
 **[Descargar el archivo](control_sesion.php)**
 
@@ -108,7 +108,7 @@
 
 ## 9.-Fichero script .php para "cerrar sesión" que nos redirije a la página de "Google"
 
-**Podemos ver el fichero.php [aquí](logout.php.md)**
+**Podemos ver el fichero.php [aquí](logout_php.md)**
 
 **[Descargar el archivo](logout.php)**
 
@@ -118,12 +118,12 @@
 
 ## 10.-Fichero script .php para la función de "conexión"
 
-**Podemos ver el fichero.php [aquí](connection.php.md)**
+**Podemos ver el fichero.php [aquí](connection_php.md)**
 
 **[Descargar el archivo](connection.php)**
 
 ## 11.-Fichero script .php para el tiempo de redirección
 
-**Podemos ver el fichero.php [aquí](redirec_tiempo.php.md)**
+**Podemos ver el fichero.php [aquí](redirec_tiempo_php.md)**
 
 **[Descargar el archivo](redirec_tiempo.php)**

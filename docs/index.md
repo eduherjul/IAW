@@ -11,3 +11,4 @@
 * Examen_UD2:  Implantación de aplicaciones web PHP
 * Práctica 3.1: PHP - Formularios
 * Práctica 3.3: Actividad Práctica de MySQL con Formularios en PHP
+* Práctica 3.4: Proyecto 1 PHP - Sistema de autenticación de usuarios en PHP y MYSQL

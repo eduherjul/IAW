@@ -8,7 +8,7 @@
 
 ![alt text](image.png)
 
-### 2.-Script para la creación la BBDD y tabla
+### 2.-Script para la creación  de la BBDD y tabla
 
 **Crearemos la BBDD y la tabla.**
 
