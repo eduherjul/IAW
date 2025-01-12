@@ -58,7 +58,7 @@
 
 **Podemos ver el fichero.ccs [aquí](inicio_css.md)**
 
-**[Descargar el archivo](inicio.css)**
+**[Descargar el archivo](inicio.css.zip)**
 
 **Podemos ver el fichero.html [aquí](login_html.md)**
 
