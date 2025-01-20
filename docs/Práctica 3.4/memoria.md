@@ -1,6 +1,8 @@
-# 3.4. Proyecto 1 PHP - Sistema de autenticación de usuarios en PHP y MYSQL
+# 3.4. Proyecto 1 PHP
 
-## 1.-Formulario .html para el menú
+## Sistema de autenticación de usuarios en PHP y MYSQL
+
+### 1.-Formulario .html para el menú
 
 **Podemos ver el fichero.html [aquí](operacionesBBDD_html.md)**
 
@@ -8,7 +10,7 @@
 
 ![alt text](image.png)
 
-## 2.-Fichero script .php para la creación de la BBDD y tabla
+### 2.-Fichero script .php para la creación de la BBDD y tabla
 
 **Podemos ver el fichero.php [aquí](crearBBDD_php.md)**
 
@@ -22,7 +24,7 @@
 
 ![alt text](image-3.png)
 
-## 3.-Formulario para registrarse "insertar" registros
+### 3.-Formulario para registrarse "insertar" registros
 
 **Creamos un formulario para que el usuario se puede registrar.**
 
@@ -36,7 +38,7 @@
 
 ![alt text](image-4.png)
 
-## 4.-Fichero script .php para registrarse
+### 4.-Fichero script .php para registrarse
 
 **Podemos ver el fichero.php [aquí](insertar_php.md)**
 
@@ -54,7 +56,7 @@
 
 ![alt text](image-7.png)
 
-## 5.-Formulario para hacer "login"
+### 5.-Formulario para hacer "login"
 
 **Podemos ver el fichero.ccs [aquí](inicio_css.md)**
 
@@ -66,7 +68,7 @@
 
 ![alt text](image-9.png)
 
-## 6.-Fichero script .php para iniciar el login de sesión
+### 6.-Fichero script .php para iniciar el login de sesión
 
 **Podemos ver el fichero.php [aquí](login_php.md)**
 
@@ -76,7 +78,7 @@
 
 **Nos lleva a nuestra página protegida.**
 
-## 7.-Fichero script .php "página protegida" con su imagen "logo"
+### 7.-Fichero script .php "página protegida" con su imagen "logo"
 
 **[Descargar el archivo de imagen](7883511.jpg)**
 
@@ -98,7 +100,7 @@
 
 ![alt text](image-14.png)
 
-## 8.-Fichero script .php para el control se sesión después del usuario del último login
+### 8.-Fichero script .php para el control se sesión después del usuario del último login
 
 **Podemos ver el fichero.php [aquí](control_sesion_php.md)**
 
@@ -106,7 +108,7 @@
 
 ![alt text](image-16.png)
 
-## 9.-Fichero script .php para "cerrar sesión" que nos redirije a la página de "Google"
+### 9.-Fichero script .php para "cerrar sesión" que nos redirige a la página de "Google"
 
 **Podemos ver el fichero.php [aquí](logout_php.md)**
 
@@ -116,13 +118,13 @@
 
 ![alt text](image-18.png)
 
-## 10.-Fichero script .php para la función de "conexión"
+### 10.-Fichero script .php para la función de "conexión"
 
 **Podemos ver el fichero.php [aquí](connection_php.md)**
 
 **[Descargar el archivo](connection.php)**
 
-## 11.-Fichero script .php para el tiempo de redirección
+### 11.-Fichero script .php para el tiempo de redirección
 
 **Podemos ver el fichero.php [aquí](redirec_tiempo_php.md)**
 

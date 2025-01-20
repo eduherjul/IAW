@@ -27,6 +27,13 @@ nav:
   - Práctica3.1:
       - Documento formularios:
           - Práctica 3.1/formularios.md
+  - Práctica3.3:
+      - Documento formularios PHP:
+          - Práctica 3.3/formularios_PHP.md
+  - Práctica3.4:
+      - Práctica 3.4/memoria.md
+  - Práctica3.5.1:
+      - Práctica 3.5.1/memoria.md
 docs_dir: docs
 site_dir: site
 theme:
