@@ -90,6 +90,10 @@
 
 ![alt text](image-11.png)
 
+**Comprobamos la tabla de registros "logins" de los usuarios que  han accedido.**
+
+![alt text](image-19.png)
+
 ### 8.-Fichero script .php "página protegida" con su imagen "logo"
 
 **[Descargar el archivo de imagen](logo.jpg)**
