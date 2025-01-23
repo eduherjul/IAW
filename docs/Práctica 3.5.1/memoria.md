@@ -34,7 +34,7 @@
 
 **Podemos ver el fichero.css [aquí](estilos_css.md)**
 
-**[Descargar el archivo](estilos.ccs)**
+**[Descargar el archivo](estilos.css)**
 
 **Podemos ver el fichero.html [aquí](registro_html.md)**
 
