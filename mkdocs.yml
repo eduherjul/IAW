@@ -2,39 +2,39 @@ site_author: Edu
 site_name: Edu-mkdocs
 nav:
   - Inicio: index.md
-  - Práctica1.3:
+  - P1.3:
       - Detalle:
           - Práctica 1.3/Paso1.md
           - Práctica 1.3/Paso2.md
-  - Práctica2.1:
+  - P2.1:
       - Detalle técnico:
           - Práctica 2.1/Práctica-2.1.md
-  - Práctica2.2:
+  - P2.2:
       - Detalle técnico:
           - Práctica 2.2/Documento-técnico.md
-  - Práctica2.3:
+  - P2.3:
       - Detalle informativo:
           - Práctica 2.3/Documento-informacion.md
-  - Práctica2.4:
+  - P2.4:
       - Detalle documento:
           - Práctica 2.4/Documento-detallado.md
-  - Práctica2.5:
+  - P2.5:
       - Detalle documento:
           - Práctica 2.5/Documento-apache.md
-  - RExamen_UD2:
+  - Exa.UD2:
       - Documento examen:
           - RExamen_UD2/Documento_examen.md
-  - Práctica3.1:
+  - P3.1:
       - Documento formularios:
           - Práctica 3.1/formularios.md
-  - Práctica3.3:
+  - P3.3:
       - Documento formularios PHP:
           - Práctica 3.3/formularios_PHP.md
-  - Práctica3.4:
+  - P3.4:
       - Práctica 3.4/memoria.md
-  - Práctica3.5.1:
+  - P3.5.1:
       - Práctica 3.5.1/memoria.md
-  - Práctica3.5.2:
+  - P3.5.2:
       - Práctica 3.5.2/memoria.md
 docs_dir: docs
 site_dir: site
