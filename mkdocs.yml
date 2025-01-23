@@ -34,6 +34,8 @@ nav:
       - Práctica 3.4/memoria.md
   - Práctica3.5.1:
       - Práctica 3.5.1/memoria.md
+  - Práctica3.5.2:
+      - Práctica 3.5.2/memoria.md
 docs_dir: docs
 site_dir: site
 theme:

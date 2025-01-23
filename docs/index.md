@@ -13,3 +13,4 @@
 * Práctica 3.3: Actividad Práctica de MySQL con Formularios en PHP
 * Práctica 3.4: Proyecto 1 PHP - Sistema de autenticación de usuarios en PHP y MYSQL
 * Práctica 3.5.1: Práctica Final PHP - Implementación de un Sistema de Login y Registro Seguro en PHP y MYSQL
+* Práctica 3.5.2: Final PHP con 2FA

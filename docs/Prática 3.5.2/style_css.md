@@ -1,0 +1,51 @@
+```css
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Encabezado */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Formularios */
+form {
+  margin: 10px 0;
+}
+
+input[type="submit"] {
+  background-color: #ffffff;
+  color: #2575fc;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #2575fc;
+  color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Espaciado */
+br {
+  margin-bottom: 15px;
+}
+```

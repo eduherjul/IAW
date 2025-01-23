@@ -14,5 +14,5 @@ session_destroy();
 require_once 'redirec_tiempo.php';
 
 // Llamar a la función
-redireccionConContador("CERRANDO LA SESION TE MANDO A GOOGLE", 3, "https://www.google.es");
+redireccionConContador("CIERRO LA SESION Y TE MANDO A GOOGLE", 3, "https://www.google.es");
 exit();

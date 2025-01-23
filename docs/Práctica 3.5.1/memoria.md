@@ -4,7 +4,7 @@
 
 ### 1.-Formulario .html para el menú
 
-**Podemos ver el fichero.ccs [aquí](style_ccs.md)**
+**Podemos ver el fichero.css [aquí](style_css.md)**
 
 **[Descargar el archivo](style.css.zip)**
 
@@ -32,7 +32,7 @@
 
 **Creamos un formulario para que el usuario se puede registrar.**
 
-**Podemos ver el fichero.ccs [aquí](estilos_ccs.md)**
+**Podemos ver el fichero.css [aquí](estilos_css.md)**
 
 **[Descargar el archivo](estilos.ccs)**
 
@@ -62,7 +62,7 @@
 
 ### 5.-Formulario para hacer "login"
 
-**Podemos ver el fichero.ccs [aquí](inicio_css.md)**
+**Podemos ver el fichero.css [aquí](inicio_css.md)**
 
 **[Descargar el archivo](inicio.css.zip)**
 
