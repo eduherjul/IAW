@@ -1,6 +1,4 @@
 <?php
-
-
 // Configuración de conexión
 $servidor = "localhost:3306";
 $usuario = "alumne";

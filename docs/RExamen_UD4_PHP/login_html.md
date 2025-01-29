@@ -1,0 +1,18 @@
+```html
+<!DOCTYPE html>
+<body>
+  <div class="login">
+    <div class="login-screen">
+      <h1 class="app-title">INICIAR SESION</h1>
+
+      <form action="login.php" method="POST" class="login-form">
+        <input type="text" name="nombre" class="login-field" placeholder="Nombre de usuario" required>
+        <input type="password" name="password" class="login-field" placeholder="Password" required>
+        <button type="submit">INICIAR SESION</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
+```

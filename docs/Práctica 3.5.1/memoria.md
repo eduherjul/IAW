@@ -14,7 +14,7 @@
 
 ![alt text](image.png)
 
-### 2.-Fichero script .php para la creación de la BBDD y tabla
+### 2.-Fichero script .php para la creación de la BBDD y tablas
 
 **Podemos ver el fichero.php [aquí](crearBBDD_php.md)**
 

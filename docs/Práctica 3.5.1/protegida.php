@@ -65,7 +65,7 @@ $usuario = isset($_SESSION["username"]) ? $_SESSION["username"] : "Usuario";
       <img src="/practica3.5.1/logo.jpg" alt="Logo de Todomovil">
     </div>
     <h1>Bienvenido
-      <?php echo $usuario; ?> a Sistem.login
+      <?php echo $usuario; ?> a System.login
     </h1>
     <p>Esta es una página protegida. Solo los usuarios autenticados pueden acceder.</p>
     <button class="button" onclick="location.href='/practica3.5.1/operacionesBBDD.html'">Ir a la página de inicio</button>
