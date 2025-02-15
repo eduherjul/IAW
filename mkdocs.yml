@@ -4,10 +4,10 @@ nav:
   - Inicio: index.md
   - P1.3:
       - Pasos::
-        - Paso1:
-          - Práctica 1.3/Paso1.md
-        - Paso2:
-          - Práctica 1.3/Paso2.md
+          - Paso1:
+              - Práctica 1.3/Paso1.md
+          - Paso2:
+              - Práctica 1.3/Paso2.md
   - P2.1:
       - Práctica 2.1/Práctica-2.1.md
   - P2.2:
@@ -30,6 +30,8 @@ nav:
       - Práctica 3.5.1/memoria.md
   - P3.5.2:
       - Práctica 3.5.2/memoria.md
+  - P4.1:
+      - Práctica 4.1/memoria.md
   - Exa.UD4:
       - RExamen_UD4_PHP/Documento_examen.md
 docs_dir: docs

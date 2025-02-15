@@ -1,8 +1,8 @@
 # Descripción
 
 * Práctica 1.3:
-    * Paso1: Instalar Mkdocs
-    * Paso2: Sitio estático y desplegar en Git Pages
+  * Paso1: Instalar Mkdocs
+  * Paso2: Sitio estático y desplegar en Git Pages
 * Práctica 2.1: Web estática Apache
 * Práctica 2.2: SSL/TLS autofirmado-apache
 * Práctica 2.3: Instalar, configurar y securizar phpMyAdmin
@@ -14,4 +14,5 @@
 * Práctica 3.4: Proyecto 1 PHP - Sistema de autenticación de usuarios en PHP y MYSQL
 * Práctica 3.5.1: Práctica Final PHP - Implementación de un Sistema de Login y Registro Seguro en PHP y MYSQL
 * Práctica 3.5.2: Final PHP con 2FA
+* Práctica 4.1:_Tema WP desde cero
 * Examen_UD4_PHP: Creación de un Acortador de URLs con PHP

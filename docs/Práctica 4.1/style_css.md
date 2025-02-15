@@ -1,0 +1,17 @@
+```css
+/*
+Theme Name: Mi Tema del Amanecer
+Author: Edu
+Description: Amanecer
+Version: 1.0
+*/
+
+/* Estilos generales */
+body {
+    background: url("https:// ó imagen.jpg") no-repeat center center fixed;
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    margin: 0; /* Para evitar márgenes predeterminados */
+    }
+    
+    /* Otros estilos que desees agregar */
+```
