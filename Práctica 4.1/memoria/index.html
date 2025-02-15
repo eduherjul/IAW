@@ -2787,36 +2787,9 @@ docker-compose<span class="w"> </span>--version
 <span class="nb">cd</span><span class="w"> </span>~/wordpress-docker
 nano<span class="w"> </span>docker-compose.yml
 </code></pre></div>
-<p>✍ <strong>Contenido de <code>docker-compose.yml</code>:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
-<span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">wordpress</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress:latest</span>
-<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mi-wordpress</span>
-<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8000:80&quot;</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">WORDPRESS_DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
-<span class="w">      </span><span class="nt">WORDPRESS_DB_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
-<span class="w">      </span><span class="nt">WORDPRESS_DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
-<span class="w">      </span><span class="nt">WORDPRESS_DB_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mi_wp</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./wp-content:/var/www/html/wp-content</span>
-
-<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span>
-<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mi-mysql</span>
-<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
-<span class="w">      </span><span class="nt">MYSQL_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mi_wp</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_data:/var/lib/mysql</span>
-
-<span class="nt">volumes</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">db_data</span><span class="p">:</span>
-</code></pre></div>
+<p><strong>Contenido de <code>docker-compose.yml</code>:</strong></p>
+<p><strong>Podemos ver el fichero.yml <a href="../docker-compose_yml/">aquí</a></strong></p>
+<p><strong><a href="../docker-compose.yml">Descargar el archivo</a></strong></p>
 <h4 id="paso-3-iniciamos-los-contenedores">Paso 3: Iniciamos los Contenedores</h4>
 <h5 id="ejecutamos-el-siguiente-comando-en-la-terminal-dentro-del-directorio-donde-hemos-creado-docker-composeyml">Ejecutamos el siguiente comando en la terminal dentro del directorio donde hemos creado <code>docker-compose.yml</code></h5>
 <div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
@@ -2881,8 +2854,8 @@ touch<span class="w"> </span>style.css<span class="w"> </span>index.php
 <li><strong>1. Editamos el archivo <code>style.css</code></strong>:
    <strong>Abrimos el archivo <code>style.css</code> y agregamos  la información básica del tema. Por ejemplo:</strong></li>
 </ul>
-<p><strong>Podemos ver el fichero.php <a href="../style_css/">aquí</a></strong></p>
-<p><strong><a href="../style.css">Descargar el archivo</a></strong></p>
+<p><strong>Podemos ver el fichero.css <a href="../style_css/">aquí</a></strong></p>
+<p><strong><a href="../style.css.zip">Descargar el archivo</a></strong></p>
 <p><img alt="alt text" src="../image-1.png" /></p>
 <ul>
 <li><strong>2. Editamos el archivo <code>index.php</code></strong>:</li>
@@ -2931,7 +2904,7 @@ touch<span class="w"> </span>style.css<span class="w"> </span>index.php
 <h5 id="vamos-a-modificar-nuestro-codigo-para-asegurarnos-de-que-ambos-archivos-css-stylecss-y-customcss-se-carguen-correctamente">Vamos a modificar nuestro código para asegurarnos de que ambos archivos CSS (style.css y custom.css) se carguen correctamente</h5>
 <p><strong>Código actualizado:</strong></p>
 <p><strong>Podemos ver el fichero.css <a href="../custom_css/">aquí</a></strong></p>
-<p><strong><a href="../custom.css">Descargar el archivo</a></strong></p>
+<p><strong><a href="../custom.css.zip">Descargar el archivo</a></strong></p>
 <h4 id="3para-que-wordpress-cargamos-este-archivo-abrimos-indexphp-y-agregamos-el-siguiente-codigo-para-cuando-se-carga-stylecss">3.Para que WordPress cargamos este archivo, abrimos <code>index.php</code> y agregamos el siguiente código para cuando se carga style.css</h4>
 <div class="highlight"><pre><span></span><code><span class="x">&lt;link rel=&quot;stylesheet&quot; href=&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nx">get_stylesheet_directory_uri</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">/style.css&quot;&gt;</span>
 <span class="x">&lt;link rel=&quot;stylesheet&quot; href=&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nx">get_stylesheet_directory_uri</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">/custom.css&quot;&gt;</span>
