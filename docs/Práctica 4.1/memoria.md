@@ -34,7 +34,7 @@ nano docker-compose.yml
 
 **Podemos ver el fichero.yml [aquí](docker-compose_yml.md)**
 
-**[Descargar el archivo](docker-compose.yml)**
+**[Descargar el archivo](docker-compose.yml.zip)**
 
 #### Paso 3: Iniciamos los Contenedores
 
