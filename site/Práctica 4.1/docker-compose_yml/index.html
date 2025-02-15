@@ -18,7 +18,7 @@
     
     
       
-        <title>Header php - Edu-mkdocs</title>
+        <title>Docker compose yml - Edu-mkdocs</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Header php
+              Docker compose yml
             
           </span>
         </div>
@@ -1738,24 +1738,36 @@
                   
 
 
-  <h1>Header php</h1>
+  <h1>Docker compose yml</h1>
 
-<div class="highlight"><pre><span></span><code><span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html </span><span class="cp">&lt;?php</span> <span class="nx">language_attributes</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">&gt;</span>
-<span class="x">&lt;head&gt;</span>
-<span class="x">    &lt;meta charset=&quot;</span><span class="cp">&lt;?php</span> <span class="nx">bloginfo</span><span class="p">(</span><span class="s1">&#39;charset&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span>
-<span class="x">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span>
-<span class="x">    </span><span class="cp">&lt;?php</span> <span class="nx">wp_head</span><span class="p">();</span> <span class="cp">?&gt;</span>
-<span class="x">&lt;/head&gt;</span>
-<span class="x">&lt;body </span><span class="cp">&lt;?php</span> <span class="nx">body_class</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">&gt;</span>
-<span class="x">    &lt;header class=&quot;header&quot;&gt;</span>
-<span class="x">        &lt;div class=&quot;site-title&quot;&gt;</span>
-<span class="x">            &lt;a href=&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nx">home_url</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="nx">bloginfo</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/a&gt;</span>
-<span class="x">        &lt;/div&gt;</span>
-<span class="x">        &lt;nav class=&quot;main-navigation&quot;&gt;</span>
-<span class="x">            </span><span class="cp">&lt;?php</span> <span class="nx">wp_nav_menu</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;theme_location&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;primary&#39;</span><span class="p">));</span> <span class="cp">?&gt;</span>
-<span class="x">        &lt;/nav&gt;</span>
-<span class="x">    &lt;/header&gt;</span>
+<div class="highlight"><pre><span></span><code>version: &#39;3.8&#39;
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: mi-wordpress
+    restart: always
+    ports:
+      - &quot;8000:80&quot;
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: root
+      WORDPRESS_DB_NAME: mi_wp
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+
+  db:
+    image: mysql:5.7
+    container_name: mi-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mi_wp
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
 </code></pre></div>
 
 
