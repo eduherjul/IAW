@@ -1,0 +1,31 @@
+```yml
+version: '3.8'
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: mi-wordpress
+    restart: always
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: root
+      WORDPRESS_DB_NAME: mi_wp
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+
+  db:
+    image: mysql:5.7
+    container_name: mi-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mi_wp
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
+```
+  

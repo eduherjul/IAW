@@ -30,38 +30,11 @@ cd ~/wordpress-docker
 nano docker-compose.yml
 ```
 
-✍ **Contenido de `docker-compose.yml`:**
+ **Contenido de `docker-compose.yml`:**
 
-```yaml
-version: '3.8'
-services:
-  wordpress:
-    image: wordpress:latest
-    container_name: mi-wordpress
-    restart: always
-    ports:
-      - "8000:80"
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: root
-      WORDPRESS_DB_NAME: mi_wp
-    volumes:
-      - ./wp-content:/var/www/html/wp-content
+**Podemos ver el fichero.yml [aquí](docker-compose_yml.md)**
 
-  db:
-    image: mysql:5.7
-    container_name: mi-mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mi_wp
-    volumes:
-      - db_data:/var/lib/mysql
-
-volumes:
-  db_data:
-```
+**[Descargar el archivo](docker-compose.yml)**
 
 #### Paso 3: Iniciamos los Contenedores
 
@@ -166,9 +139,9 @@ code ~/wordpress-docker/wp-content/themes/mi-tema-personalizado
 - **1. Editamos el archivo `style.css`**:
    **Abrimos el archivo `style.css` y agregamos  la información básica del tema. Por ejemplo:**
 
-**Podemos ver el fichero.php [aquí](style_css.md)**
+**Podemos ver el fichero.css [aquí](style_css.md)**
 
-**[Descargar el archivo](style.css)**
+**[Descargar el archivo](style.css.zip)**
 
 ![alt text](image-1.png)
 
@@ -232,7 +205,7 @@ docker cp /home/yo/Escritorio/Comparte/screenshot.png wordpress-wordpress-1:/var
 
 **Podemos ver el fichero.css [aquí](custom_css.md)**
 
-**[Descargar el archivo](custom.css)**
+**[Descargar el archivo](custom.css.zip)**
 
 #### 3.Para que WordPress cargamos este archivo, abrimos `index.php` y agregamos el siguiente código para cuando se carga style.css
 
@@ -331,7 +304,6 @@ docker cp /home/yo/Escritorio/Comparte/screenshot.png wordpress-wordpress-1:/var
 ![alt text](image-22.png)
 
 ![alt text](image-12.png)
-
 
 ##### Vemos la estructura de directorios y ficheros creada
 
